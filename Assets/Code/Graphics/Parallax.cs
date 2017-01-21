@@ -17,7 +17,9 @@ public class Parallax : MonoBehaviour
 	{
 		for(int i = 0; i < m_ParallaxSprites.Count; i++)
 		{
-			Vector3 parallaxPosition = (m_lastFramePosition - transform.position) * (m_ParallaxSprites[i].m_ParallaxSpeed - 1.0f) ;
+			Vector3 parallaxPosition = (m_lastFramePosition - transform.position);
+			parallaxPosition.x *= (m_ParallaxSprites[i].m_HorizontalParallaxSpeed - 1.0f);
+			parallaxPosition.y *= (m_ParallaxSprites[i].m_VerticalParallaxSpeed - 1.0f);
 			m_ParallaxSprites[i].transform.position += new Vector3(parallaxPosition.x, parallaxPosition.y, 0.0f);
 		}
 
