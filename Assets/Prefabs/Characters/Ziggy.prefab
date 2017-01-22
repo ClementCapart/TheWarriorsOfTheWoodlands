@@ -401,6 +401,7 @@ MonoBehaviour:
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
+  IsDead: 0
   Direction: 1
 --- !u!212 &212106893015998242
 SpriteRenderer:
