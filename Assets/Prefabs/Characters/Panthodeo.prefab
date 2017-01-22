@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 95494485340434450}
   - component: {fileID: 114944769832711492}
   - component: {fileID: 114694051526238072}
+  - component: {fileID: 114632244572666230}
   m_Layer: 0
   m_Name: Panthodeo
   m_TagString: Untagged
@@ -96,6 +97,18 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &114632244572666230
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1890831386999402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 529f297018645014a95950fda7da476a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_StartingHealthPoints: 100
 --- !u!114 &114694051526238072
 MonoBehaviour:
   m_ObjectHideFlags: 1
