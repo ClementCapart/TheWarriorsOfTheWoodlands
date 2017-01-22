@@ -1,8 +1,6 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
-public class Health : MonoBehaviour 
+public class Health : MonoBehaviour
 {
 	public float m_StartingHealthPoints = 100.0f;
 	private float m_CurrentHealthPoints = 0.0f;
@@ -15,7 +13,7 @@ public class Health : MonoBehaviour
 	public void TakeDamage(float value)
 	{
 		m_CurrentHealthPoints -= value;
-		if(m_CurrentHealthPoints <= 0.0f)
+		if (m_CurrentHealthPoints <= 0.0f)
 		{
 			m_CurrentHealthPoints = 0.0f;
 			Die();
