@@ -2,49 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlatformerController : MonoBehaviour 
+public class CharacterMovement : MonoBehaviour 
 {
-	public int m_PlayerIndex = 0;
+	private Controller m_CharacterController = null;
+	private Rigidbody2D m_Rigidbody = null;
+	private CapsuleCollider2D m_Collider = null;
 
 	public float m_HorizontalAcceleration = 15.0f;
 	public float m_MaxHorizontalSpeed = 3.5f;
 	public float m_JumpImpulse = 5.0f;
 	public bool m_AllowDoubleJump = true;
 	public float m_DoubleJumpImpulse = 3.0f;
-	public float m_MaxJumpRequestDelay = 0.2f;
 
-	public float m_GroundRaycastOffset = 0.01f;
-	public Rigidbody2D m_Rigidbody = null;
-	public CapsuleCollider2D m_Collider = null;
+	public float m_GroundRaycastOffset = 0.01f;	
 
 	public bool m_IsOnGround = false;
-
-	private bool m_MustJumpAsSoonAsPossible = false;
-	private float m_CurrentJumpRequestDelay = 0.0f;
 	private bool m_HasAlreadyDoubleJumped = false;
 	private RaycastHit2D[] m_RaycastNonAllocResults = new RaycastHit2D[1];
 
 	void Awake()
 	{
+		m_CharacterController = GetComponent<PlayerController>();
 		m_Rigidbody = GetComponent<Rigidbody2D>();
 		m_Collider = GetComponent<CapsuleCollider2D>();
 	}
 
 	void FixedUpdate()
 	{
-		float horizontalAxis = XInput.GetAxis(Axis.LeftStickHorizontal, m_PlayerIndex);
-		
-		if(Input.GetKey(KeyCode.LeftArrow))
-		{
-			horizontalAxis = -1.0f;
-		}
-		else if(Input.GetKey(KeyCode.RightArrow))
-		{
-			horizontalAxis = 1.0f;
-		}
+		float horizontalAxis = m_CharacterController.MoveAxis;		
 
 		Vector2 finalForce = Vector2.zero;
-		finalForce.x = horizontalAxis * m_HorizontalAcceleration * Time.deltaTime;		
+		finalForce.x = horizontalAxis * m_HorizontalAcceleration * Time.fixedDeltaTime;		
 
 		m_Rigidbody.velocity = m_Rigidbody.velocity + finalForce;
 		m_Rigidbody.velocity = new Vector2(Mathf.Clamp(m_Rigidbody.velocity.x, -m_MaxHorizontalSpeed, m_MaxHorizontalSpeed), m_Rigidbody.velocity.y);
@@ -54,13 +42,13 @@ public class PlatformerController : MonoBehaviour
 			m_HasAlreadyDoubleJumped = false;
 		}
 
-		if(m_MustJumpAsSoonAsPossible)
+		if(m_CharacterController.JumpRequested)
 		{			
 			if (m_IsOnGround)
 			{
 				m_Rigidbody.velocity = new Vector2(m_Rigidbody.velocity.x, 0.0f);
 				m_Rigidbody.AddForce(Vector2.up * m_JumpImpulse, ForceMode2D.Impulse);
-				CancelJumpRequest();
+				m_CharacterController.CancelJumpRequest();
 			}			
 			else if(m_AllowDoubleJump)
 			{
@@ -69,7 +57,7 @@ public class PlatformerController : MonoBehaviour
 					m_HasAlreadyDoubleJumped = true;
 					m_Rigidbody.velocity = new Vector2(m_Rigidbody.velocity.x, 0.0f);
 					m_Rigidbody.AddForce(Vector2.up * m_DoubleJumpImpulse, ForceMode2D.Impulse);
-					CancelJumpRequest();
+					m_CharacterController.CancelJumpRequest();
 				}
 			}
 		}
@@ -77,32 +65,7 @@ public class PlatformerController : MonoBehaviour
 
 	void Update()
 	{
-		CheckGround();
-
-		if(XInput.GetButtonDown(Buttons.A, m_PlayerIndex) || Input.GetKeyDown(KeyCode.Space))
-		{
-			JumpRequest();
-		}
-
-		if(m_MustJumpAsSoonAsPossible && m_CurrentJumpRequestDelay > m_MaxJumpRequestDelay)
-		{
-			CancelJumpRequest();
-		}
-		else if(m_MustJumpAsSoonAsPossible)
-		{
-			m_CurrentJumpRequestDelay += Time.deltaTime;
-		}
-	}
-
-	void JumpRequest()
-	{
-		m_MustJumpAsSoonAsPossible = true;
-	}
-
-	void CancelJumpRequest()
-	{
-		m_MustJumpAsSoonAsPossible = false;
-		m_CurrentJumpRequestDelay = 0.0f;
+		CheckGround();		
 	}
 
 	void CheckGround()

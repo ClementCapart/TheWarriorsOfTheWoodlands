@@ -5,6 +5,7 @@ using UnityEngine;
 public class SmartCamera : MonoBehaviour
 {
     public Transform m_MainTarget = null;
+	private Rigidbody2D m_TargetRigidbody = null;
 	public float m_DefaultDistance = 10.0f;
 
 	public float m_TargetPositionSmoothRate = 1.0f;
@@ -27,7 +28,7 @@ public class SmartCamera : MonoBehaviour
 		m_CurrentPointsOfInterest = new List<PointOfInterest>(Object.FindObjectsOfType<PointOfInterest>());
     }
 
-    private void Update()
+    private void FixedUpdate()
     {
 		Vector3 displacement = Vector3.zero;
 		float distanceDisplacement = 0.0f;
@@ -46,7 +47,7 @@ public class SmartCamera : MonoBehaviour
 		m_TargetDistance.Value = m_DefaultDistance + distanceDisplacement;
 
 		m_TargetPosition.Update(Time.deltaTime);
-		m_TargetDistance.Update(Time.deltaTime);		
+		m_TargetDistance.Update(Time.deltaTime);
 
 		transform.position = m_TargetPosition.Value - new Vector3(0.0f, 0.0f, m_TargetDistance.Value);
 		if(m_Camera != null && m_Camera.orthographic)
