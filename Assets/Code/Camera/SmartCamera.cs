@@ -5,7 +5,6 @@ using UnityEngine;
 public class SmartCamera : MonoBehaviour
 {
     public Transform m_MainTarget = null;
-	private Rigidbody2D m_TargetRigidbody = null;
 	public float m_DefaultDistance = 10.0f;
 
 	public float m_TargetPositionSmoothRate = 1.0f;

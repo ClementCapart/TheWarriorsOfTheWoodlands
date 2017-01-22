@@ -15,7 +15,7 @@ public abstract class Controller : MonoBehaviour
 
 	protected virtual void Update()
 	{
-		if(m_jumpRequested && m_currentJumpRequestDelay > m_MaxJumpRequestDelay)
+		if(m_jumpRequested && m_MaxJumpRequestDelay >= 0.0f && m_currentJumpRequestDelay > m_MaxJumpRequestDelay)
 		{
 			CancelJumpRequest();
 		}

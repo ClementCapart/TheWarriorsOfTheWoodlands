@@ -22,13 +22,14 @@ public class CharacterMovement : MonoBehaviour
 
 	void Awake()
 	{
-		m_CharacterController = GetComponent<PlayerController>();
+		m_CharacterController = GetComponent<Controller>();
 		m_Rigidbody = GetComponent<Rigidbody2D>();
 		m_Collider = GetComponent<CapsuleCollider2D>();
 	}
 
 	void FixedUpdate()
 	{
+		if (m_CharacterController == null) return;
 		float horizontalAxis = m_CharacterController.MoveAxis;		
 
 		Vector2 finalForce = Vector2.zero;
