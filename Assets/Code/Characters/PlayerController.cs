@@ -18,11 +18,13 @@ public class PlayerController : Controller
 	public int m_PlayerIndex = 0;
 	public Axis m_MoveAxisControl = Axis.LeftStickHorizontal;
 	public Buttons m_JumpButton = Buttons.A;
+	public Buttons m_AttackButton = Buttons.X;
 
 	[Header("Keyboard Controls")]
 	public KeyCode m_MoveLeftKeyboard = KeyCode.LeftArrow;
-	public KeyCode m_MoveRightKeyboard = KeyCode.LeftArrow;
+	public KeyCode m_MoveRightKeyboard = KeyCode.RightArrow;
 	public KeyCode m_JumpKeyboard = KeyCode.Space;
+	public KeyCode m_AttackKeyboard = KeyCode.LeftControl;
 
 	protected override void Update()
 	{
@@ -34,6 +36,11 @@ public class PlayerController : Controller
 			{
 				RequestJump();
 			}
+
+			if(XInput.GetButtonDown(m_AttackButton, m_PlayerIndex))
+			{
+				RequestAttack();
+			}
 		}
 
 		if ((m_ControlDevice & ControlDevice.Keyboard) != 0)
@@ -43,6 +50,11 @@ public class PlayerController : Controller
 			if(Input.GetKeyDown(m_JumpKeyboard))
 			{
 				RequestJump();
+			}
+
+			if (Input.GetKeyDown(m_AttackKeyboard))
+			{
+				RequestAttack();
 			}
 		}
 

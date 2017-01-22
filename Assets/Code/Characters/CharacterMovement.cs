@@ -7,6 +7,7 @@ public class CharacterMovement : MonoBehaviour
 	private Controller m_CharacterController = null;
 	private Rigidbody2D m_Rigidbody = null;
 	private CapsuleCollider2D m_Collider = null;
+	private CharacterDataModule m_Character = null;
 
 	public float m_HorizontalAcceleration = 15.0f;
 	public float m_MaxHorizontalSpeed = 3.5f;
@@ -20,8 +21,9 @@ public class CharacterMovement : MonoBehaviour
 	private bool m_HasAlreadyDoubleJumped = false;
 	private RaycastHit2D[] m_RaycastNonAllocResults = new RaycastHit2D[1];
 
-	void Awake()
+	void Start()
 	{
+		m_Character = GetComponent<CharacterDataModule>();
 		m_CharacterController = GetComponent<Controller>();
 		m_Rigidbody = GetComponent<Rigidbody2D>();
 		m_Collider = GetComponent<CapsuleCollider2D>();
@@ -66,14 +68,34 @@ public class CharacterMovement : MonoBehaviour
 
 	void Update()
 	{
-		CheckGround();		
+		CheckGround();
+		if (m_Character != null)
+		{
+			if (Mathf.Abs(m_Rigidbody.velocity.x) > 0.1f)
+			{
+				if (m_Rigidbody.velocity.x < 0.0f)
+				{
+					m_Character.Direction = -1;
+				}
+				else
+				{
+					m_Character.Direction = 1;
+				}
+
+				m_Character.IsMoving = true;
+			}
+			else
+			{
+				m_Character.IsMoving = false;
+			}
+		}
 	}
 
 	void CheckGround()
 	{
-		Vector3 startPoint = transform.position + new Vector3(0.0f, -(m_Collider.size.y / 2.0f) + 0.01f, 0.0f);
-		Vector3 leftStartPoint = transform.position + new Vector3(-(m_Collider.size.x / 2.0f), -(m_Collider.size.y / 2.0f) + 0.01f, 0.0f);
-		Vector3 rightStartPoint = transform.position + new Vector3((m_Collider.size.x / 2.0f), -(m_Collider.size.y / 2.0f) + 0.01f, 0.0f);
+		Vector3 startPoint = transform.position + new Vector3(m_Collider.offset.x, -(m_Collider.size.y / 2.0f) + 0.01f + m_Collider.offset.y, 0.0f);
+		Vector3 leftStartPoint = transform.position + new Vector3(-(m_Collider.size.x / 2.0f) + m_Collider.offset.x, -(m_Collider.size.y / 2.0f) + 0.01f + m_Collider.offset.y, 0.0f);
+		Vector3 rightStartPoint = transform.position + new Vector3((m_Collider.size.x / 2.0f) + m_Collider.offset.x, -(m_Collider.size.y / 2.0f) + 0.01f + m_Collider.offset.y, 0.0f);
 
 		if (Physics2D.RaycastNonAlloc(startPoint, Vector2.down, m_RaycastNonAllocResults, m_GroundRaycastOffset + 0.01f) > 0)
 		{
