@@ -16,25 +16,40 @@ public class CharacterAnimator : MonoBehaviour
 
 	void Update()
 	{
-		if(m_Character.IsMoving)
+		if (!m_Character.IsDead)
 		{
-			m_Animator.SetBool("Walk", true);
+			if (m_Character.IsMoving)
+			{
+				m_Animator.SetBool("Walk", true);
+			}
+			else
+			{
+				m_Animator.SetBool("Walk", false);
+			}
+
+			transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * m_Character.Direction, transform.localScale.y, transform.localScale.z);
+
+			if (m_Character.IsAttacking && !m_HasAlreadyAttacked)
+			{
+				m_HasAlreadyAttacked = true;
+				m_Animator.SetTrigger("Attack");
+			}
+			else if (!m_Character.IsAttacking)
+			{
+				m_HasAlreadyAttacked = false;
+			}
 		}
 		else
 		{
-			m_Animator.SetBool("Walk", false);
-		}
-
-		transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * m_Character.Direction, transform.localScale.y, transform.localScale.z);
-
-		if(m_Character.IsAttacking && !m_HasAlreadyAttacked) 
-		{
-			m_HasAlreadyAttacked = true;
-			m_Animator.SetTrigger("Attack");
-		}
-		else if(!m_Character.IsAttacking)
-		{
-			m_HasAlreadyAttacked = false;
+			if(!m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+			{
+				m_Animator.SetTrigger("Death");
+			}
+			else if(m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+			{
+				Destroy(gameObject);
+			}
+			
 		}
 	}
 }
