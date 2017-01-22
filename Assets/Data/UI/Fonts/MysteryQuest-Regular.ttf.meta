@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: b9296e58a2edb91488c46bfb91c169b1
+timeCreated: 1485116783
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Mystery Quest
+  fontNames:
+  - Mystery Quest
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
