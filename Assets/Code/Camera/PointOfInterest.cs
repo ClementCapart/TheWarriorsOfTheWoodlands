@@ -26,7 +26,6 @@ public class PointOfInterest : MonoBehaviour
 	public float GetInfluencedDisplacementAndDistance(Vector3 position, float distance, out Vector3 displacement, out float distanceDisplacement)
 	{
 		Vector3 currentPosition = transform.position;
-
 		if(m_ShapeType == ShapeType.Line && m_SecondLinePoint != null)
 		{
 			currentPosition = MathUtils.NearpointOnLine(currentPosition, m_SecondLinePoint.position, position);
