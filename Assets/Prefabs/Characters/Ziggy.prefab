@@ -326,8 +326,8 @@ MonoBehaviour:
   m_AttackButton: 3
   m_MoveLeftKeyboard: 276
   m_MoveRightKeyboard: 275
-  m_JumpKeyboard: 32
-  m_AttackKeyboard: 306
+  m_JumpKeyboard: 305
+  m_AttackKeyboard: 303
 --- !u!114 &114524504865433294
 MonoBehaviour:
   m_ObjectHideFlags: 1

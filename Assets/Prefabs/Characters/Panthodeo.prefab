@@ -496,12 +496,12 @@ MonoBehaviour:
   m_MaxJumpRequestDelay: 0.1
   m_MaxAttackRequestDelay: 0.1
   m_ControlDevice: 3
-  m_PlayerIndex: 0
+  m_PlayerIndex: 1
   m_MoveAxisControl: 1
   m_JumpButton: 1
   m_AttackButton: 3
-  m_MoveLeftKeyboard: 276
-  m_MoveRightKeyboard: 275
+  m_MoveLeftKeyboard: 113
+  m_MoveRightKeyboard: 100
   m_JumpKeyboard: 32
   m_AttackKeyboard: 306
 --- !u!114 &114944769832711492
