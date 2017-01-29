@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 224833495008970288}
   - component: {fileID: 222276691091762218}
   - component: {fileID: 114623584010236894}
+  - component: {fileID: 114875664335509130}
   m_Layer: 0
   m_Name: Text
   m_TagString: Untagged
@@ -156,9 +157,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'Ziggy spots people raiding his and Panthodeo''s house.
-
-    It was Sword Slasher and his Toetoebows'
+  m_Text: 
 --- !u!114 &114838946961447556
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -180,6 +179,18 @@ MonoBehaviour:
   m_FallbackScreenDPI: 96
   m_DefaultSpriteDPI: 96
   m_DynamicPixelsPerUnit: 1
+--- !u!114 &114875664335509130
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1697083881999764}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e75f6c2319a0530488b6c1a0665f7d45, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_TextArea: {fileID: 114623584010236894}
 --- !u!222 &222276691091762218
 CanvasRenderer:
   m_ObjectHideFlags: 1

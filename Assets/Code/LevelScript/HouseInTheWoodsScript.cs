@@ -13,6 +13,14 @@ public class HouseInTheWoodsScript : MonoBehaviour
 	public GameObject m_GameplayPointsOfInterest = null;
 	public float m_ScriptedCameraSmoothingRate = 0.5f;
 
+	public GameObject m_Enemies = null;
+
+	[TextArea(4, 4)]
+	public List<string> m_FirstIntroText = new List<string>();
+	public float m_DelayBetweenTexts = 3.0f;
+
+	public float m_TextSpeed = 30.0f;
+
 	void Awake()
 	{
 		StartCoroutine(IntroScript());
@@ -33,11 +41,27 @@ public class HouseInTheWoodsScript : MonoBehaviour
 	IEnumerator IntroScript()
 	{
 		m_GameplayPointsOfInterest.SetActive(false);
+		m_Enemies.SetActive(false);
+
 		GameObject obj = Instantiate<GameObject>(m_GameCameraPrefab);
 		m_GameCamera = obj.GetComponent<SmartCamera>();
-		m_GameCamera.SetPosition(m_ScriptedSwordSlasherPoint.transform.position, m_ScriptedSwordSlasherPoint.m_Distance);
-		m_GameCamera.m_MainTarget = m_ScriptedSwordSlasherPoint.transform;
+		m_GameCamera.SetPosition(m_ScriptedHousePoint.transform.position, m_ScriptedHousePoint.m_Distance);
+		m_GameCamera.m_MainTarget = m_ScriptedHousePoint.transform;
 		m_GameCamera.m_TargetPositionSmoothRate = m_ScriptedCameraSmoothingRate;
+
+		if(TextBox.Instance != null)
+		{
+			for (int i = 0; i < m_FirstIntroText.Count; i++)
+			{
+				yield return TextBox.Instance.DisplayText(m_FirstIntroText[i], m_TextSpeed);
+				if(i != m_FirstIntroText.Count - 1)
+					yield return new WaitForSeconds(m_DelayBetweenTexts);
+			}
+		}
+
+		m_Enemies.SetActive(true);
+
+		FocusOnSwordSlasher();		
 
 		m_SwordSlasherAIController.SetTargetPosition(m_SwordSlasherTargetPosition);
 		
