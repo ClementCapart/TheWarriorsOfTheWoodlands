@@ -13,11 +13,12 @@ public class Attack : MonoBehaviour
 {
 	private AttackState m_currentState = AttackState.Idle;
 	public AttackState State { get { return m_currentState; } }
-
+	public CharacterDataModule m_Character;
 	public float m_Cooldown = 1.0f;
 	public float m_Duration = 0.5f;
 
 	public float m_Damage = 50.0f;
+	public Vector3 m_Impulse = Vector3.zero;
 
 	public Collider2D m_Collider = null;
 
@@ -29,7 +30,12 @@ public class Attack : MonoBehaviour
 		if(target != null && !m_AlreadyHitTargets.Contains(target))
 		{
 			m_AlreadyHitTargets.Add(target);
-			target.TakeDamage(m_Damage);
+			Vector3 impulse = m_Impulse;
+			if(m_Character)
+			{
+				impulse = new Vector3(impulse.x * (m_Character.Direction >= 0 ? 1 : -1), impulse.y, impulse.z); 
+			}
+			target.TakeDamage(m_Damage, impulse);
 		}
 	}
 
