@@ -17,13 +17,18 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 	[TextArea(4, 4)]
 	public List<string> m_FirstIntroText = new List<string>();
+	[TextArea(4, 4)]
+	public List<string> m_AfterSwordSlasherText = new List<string>();
+	[TextArea(4, 4)]
+	public List<string> m_EndIntroText = new List<string>();
+
 	public float m_DelayBetweenTexts = 3.0f;
 
 	public float m_TextSpeed = 30.0f;
 
-	public PlayerController[] m_Controllers = null;
+	private PlayerController[] m_Controllers = null;
 
-	void Awake()
+	void Start()
 	{
 		StartCoroutine(IntroScript());
 	}
@@ -59,9 +64,19 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		m_Enemies.SetActive(true);
 		m_SwordSlasherAIController.SetTargetPosition(m_SwordSlasherTargetPosition);
 
-		yield return m_GameCamera.SetTargetAndWaitForSettle(m_ScriptedSwordSlasherPoint.transform);		
-		
-		while(!m_SwordSlasherAIController.m_HasReachedDestination)
+		yield return m_GameCamera.SetTargetAndWaitForSettle(m_ScriptedSwordSlasherPoint.transform);
+
+		if (TextBox.Instance != null)
+		{
+			for (int i = 0; i < m_AfterSwordSlasherText.Count; i++)
+			{
+				yield return TextBox.Instance.DisplayText(m_AfterSwordSlasherText[i], m_TextSpeed);
+				if (i != m_AfterSwordSlasherText.Count - 1)
+					yield return new WaitForSeconds(m_DelayBetweenTexts);
+			}
+		}
+
+		while (!m_SwordSlasherAIController.m_HasReachedDestination)
 		{
 			yield return 0;
 		}
@@ -72,9 +87,24 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 		yield return m_GameCamera.SetTargetAndWaitForSettle(m_ScriptedHousePoint.transform);
 
+		if (TextBox.Instance != null)
+		{
+			for (int i = 0; i < m_EndIntroText.Count; i++)
+			{
+				yield return TextBox.Instance.DisplayText(m_EndIntroText[i], m_TextSpeed);
+				if (i != m_EndIntroText.Count - 1)
+					yield return new WaitForSeconds(m_DelayBetweenTexts);
+			}
+		}
+
 		for (int i = 0; i < m_Controllers.Length; i++)
 		{
 			m_Controllers[i].UnlockControl();
+		}
+
+		if(TextBox.Instance)
+		{
+			TextBox.Instance.HideTextBox();
 		}
 	}
 

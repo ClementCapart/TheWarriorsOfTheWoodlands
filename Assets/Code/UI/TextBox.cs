@@ -8,6 +8,7 @@ public class TextBox : MonoBehaviour
 	public static TextBox Instance = null;
 
 	public Text m_TextArea;
+	public GameObject m_Parent = null;
 
 	void Awake()
 	{
@@ -16,6 +17,8 @@ public class TextBox : MonoBehaviour
 
 	public IEnumerator DisplayText(string text, float speed)
 	{
+		ShowTextBox();
+
 		m_TextArea.text = "";
 
 		float substring = 0;
@@ -31,6 +34,22 @@ public class TextBox : MonoBehaviour
 			}			
 			
 			yield return 0;
+		}
+	}
+
+	public void HideTextBox()
+	{
+		if(m_Parent != null)
+		{
+			m_Parent.SetActive(false);
+		}
+	}
+
+	public void ShowTextBox()
+	{
+		if(m_Parent != null)
+		{
+			m_Parent.SetActive(true);
 		}
 	}
 }

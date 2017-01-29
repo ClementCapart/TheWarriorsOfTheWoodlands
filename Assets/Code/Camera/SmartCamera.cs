@@ -44,6 +44,7 @@ public class SmartCamera : MonoBehaviour
 	public IEnumerator SetTargetAndWaitForSettle(Transform target)
 	{
 		m_MainTarget = target;
+		m_TargetPosition.Value = m_MainTarget.position;
 		yield return 0;
 
 		while(!m_TargetPosition.IsAlmostDone(0.5f))
