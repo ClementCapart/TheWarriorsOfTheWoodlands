@@ -48,6 +48,14 @@ public class AIController : Controller
 	public void SetTargetPosition(Transform target)
 	{
 		m_TargetPosition = target;
-		m_HasReachedDestination = false;
+		m_Direction = 0;
+		if(m_TargetPosition == null)
+		{
+			m_HasReachedDestination = true;
+		}
+		else
+		{
+			m_HasReachedDestination = false;
+		}
 	}
 }

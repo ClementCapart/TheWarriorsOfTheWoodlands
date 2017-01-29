@@ -93,6 +93,12 @@ public class CharacterMovement : MonoBehaviour
 
 	void CheckGround()
 	{
+		if(m_Collider == null)
+		{
+			m_IsOnGround = true;
+			return;
+		}
+
 		Vector3 startPoint = transform.position + new Vector3(m_Collider.offset.x, -(m_Collider.size.y / 2.0f) + 0.01f + m_Collider.offset.y, 0.0f);
 		Vector3 leftStartPoint = transform.position + new Vector3(-(m_Collider.size.x / 2.0f) + m_Collider.offset.x, -(m_Collider.size.y / 2.0f) + 0.01f + m_Collider.offset.y, 0.0f);
 		Vector3 rightStartPoint = transform.position + new Vector3((m_Collider.size.x / 2.0f) + m_Collider.offset.x, -(m_Collider.size.y / 2.0f) + 0.01f + m_Collider.offset.y, 0.0f);

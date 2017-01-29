@@ -29,8 +29,7 @@ public class SmartCamera : MonoBehaviour
 			m_TargetDistance = new SmoothFloat(m_TargetDistanceSmoothRate);
 		}
 		m_Camera = GetComponent<Camera>();
-
-		m_CurrentPointsOfInterest = new List<PointOfInterest>(Object.FindObjectsOfType<PointOfInterest>());
+		m_CurrentPointsOfInterest = new List<PointOfInterest>(Resources.FindObjectsOfTypeAll<PointOfInterest>());
     }
 
 	public void SetPosition(Vector3 position, float distance)

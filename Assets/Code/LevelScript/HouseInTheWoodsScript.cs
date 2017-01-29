@@ -10,10 +10,21 @@ public class HouseInTheWoodsScript : MonoBehaviour
 	public PointOfInterest m_ScriptedHousePoint = null;
 	public AIController m_SwordSlasherAIController = null;
 	public Transform m_SwordSlasherTargetPosition = null;
+	public Transform m_SwordSlasherOutOfScreenPosition = null;
 	public GameObject m_GameplayPointsOfInterest = null;
+	public GameObject m_ScriptedPointsOfInterest = null;
 	public float m_ScriptedCameraSmoothingRate = 0.5f;
+	public float m_DefaultCameraSmoothingRate = 3.0f;
 
 	public GameObject m_Enemies = null;
+	public GameObject m_CamaastageTrigger = null;
+
+	public AIController m_ToetoebowWallController = null;
+	public Transform m_ToetoebowWallFirstTargetPosition = null;
+	public Transform m_ToetoebowWallSecondTargetPosition = null;
+	public Transform m_ToeToeBowWallAwayTargetPosition = null;
+
+	public Animator m_HouseAnimator = null;
 
 	[TextArea(4, 4)]
 	public List<string> m_FirstIntroText = new List<string>();
@@ -21,6 +32,9 @@ public class HouseInTheWoodsScript : MonoBehaviour
 	public List<string> m_AfterSwordSlasherText = new List<string>();
 	[TextArea(4, 4)]
 	public List<string> m_EndIntroText = new List<string>();
+
+	[TextArea(4, 4)]
+	public List<string> m_ToeToeBowWallText = new List<string>();
 
 	public float m_DelayBetweenTexts = 3.0f;
 
@@ -31,6 +45,11 @@ public class HouseInTheWoodsScript : MonoBehaviour
 	void Start()
 	{
 		StartCoroutine(IntroScript());
+	}
+
+	public void GetBackToHouse()
+	{
+		StartCoroutine(GetBackToHouseScript());
 	}
 
 	IEnumerator IntroScript()
@@ -105,6 +124,98 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		if(TextBox.Instance)
 		{
 			TextBox.Instance.HideTextBox();
+		}
+
+		m_GameplayPointsOfInterest.SetActive(true);
+		m_ScriptedPointsOfInterest.SetActive(false);
+		m_GameCamera.m_MainTarget = m_Controllers[0].transform;
+		m_GameCamera.m_TargetPositionSmoothRate = m_DefaultCameraSmoothingRate;
+	}
+
+	IEnumerator GetBackToHouseScript()
+	{
+		for (int i = 0; i < m_Controllers.Length; i++)
+		{
+			m_Controllers[i].LockControl();
+		}
+		m_SwordSlasherAIController.SetTargetPosition(m_SwordSlasherOutOfScreenPosition);
+
+		while(!m_SwordSlasherAIController.m_HasReachedDestination)
+		{
+			yield return 0;
+		}
+
+		m_ToetoebowWallController.SetTargetPosition(m_ToetoebowWallFirstTargetPosition);
+
+		while(!m_ToetoebowWallController.m_HasReachedDestination)
+		{
+			yield return 0;
+		}
+
+		if (TextBox.Instance != null)
+		{
+			for (int i = 0; i < m_ToeToeBowWallText.Count; i++)
+			{
+				yield return TextBox.Instance.DisplayText(m_ToeToeBowWallText[i], m_TextSpeed);
+				if (i != m_ToeToeBowWallText.Count - 1)
+					yield return new WaitForSeconds(m_DelayBetweenTexts);
+			}
+		}
+
+		m_GameCamera.m_TargetPositionSmoothRate = m_ScriptedCameraSmoothingRate;
+
+		m_GameplayPointsOfInterest.SetActive(false);
+		m_ScriptedPointsOfInterest.SetActive(true);
+
+		yield return m_GameCamera.SetTargetAndWaitForSettle(m_ScriptedHousePoint.transform);
+
+		yield return new WaitForSeconds(0.5f);
+
+		m_GameCamera.m_TargetPositionSmoothRate = m_DefaultCameraSmoothingRate;
+
+		m_GameplayPointsOfInterest.SetActive(true);
+		m_ScriptedPointsOfInterest.SetActive(false);
+		m_GameCamera.m_MainTarget = m_Controllers[0].transform;
+
+		for (int i = 0; i < m_Controllers.Length; i++)
+		{
+			m_Controllers[i].UnlockControl();
+		}
+
+		yield return new WaitForSeconds(1.0f);
+
+		m_ToetoebowWallController.SetTargetPosition(m_ToetoebowWallSecondTargetPosition);
+		if (TextBox.Instance) TextBox.Instance.HideTextBox();
+		m_CamaastageTrigger.SetActive(true);
+	}
+
+	public void ToeToeBowsAway()
+	{
+		StartCoroutine(ToeToeBowsAwayScript());
+	}
+
+	IEnumerator ToeToeBowsAwayScript()
+	{
+		for(int i = 0; i < m_Controllers.Length; i++)
+		{
+			m_Controllers[i].gameObject.SetActive(false);
+		}
+
+		m_HouseAnimator.Play("HouseCamastaage");
+
+		m_ToetoebowWallController.SetTargetPosition(null);
+
+		yield return new WaitForSeconds(2.0f);
+
+		m_ToetoebowWallController.SetTargetPosition(m_ToeToeBowWallAwayTargetPosition);
+
+		yield return new WaitForSeconds(3.0f);
+
+		m_HouseAnimator.Play("HouseHighTechReveal");
+
+		for (int i = 0; i < m_Controllers.Length; i++)
+		{
+			m_Controllers[i].gameObject.SetActive(true);
 		}
 	}
 

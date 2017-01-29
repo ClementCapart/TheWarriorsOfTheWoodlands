@@ -69,6 +69,9 @@ public class PlayerController : Controller
 	public void LockControl()
 	{
 		m_Locked = true;
+		CancelAttackRequest();
+		CancelJumpRequest();
+		m_moveAxis = 0.0f;
 	}
 
 	public void UnlockControl()
