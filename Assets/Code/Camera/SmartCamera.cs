@@ -20,12 +20,26 @@ public class SmartCamera : MonoBehaviour
 
     private void Start()
     {
-		m_TargetPosition = new SmoothPosition(m_TargetPositionSmoothRate);
-		m_TargetDistance = new SmoothFloat(m_TargetDistanceSmoothRate);
+		if (m_TargetPosition == null)
+		{
+			m_TargetPosition = new SmoothPosition(m_TargetPositionSmoothRate);
+		}
+		if (m_TargetPosition == null)
+		{
+			m_TargetDistance = new SmoothFloat(m_TargetDistanceSmoothRate);
+		}
 		m_Camera = GetComponent<Camera>();
 
 		m_CurrentPointsOfInterest = new List<PointOfInterest>(Object.FindObjectsOfType<PointOfInterest>());
     }
+
+	public void SetPosition(Vector3 position, float distance)
+	{
+		m_TargetPosition = new SmoothPosition(m_TargetPositionSmoothRate);
+		m_TargetDistance = new SmoothFloat(m_TargetDistanceSmoothRate);
+		m_TargetPosition.SetNow(position);
+		m_TargetDistance.SetNow(distance);
+	}
 
     private void FixedUpdate()
     {
@@ -33,17 +47,23 @@ public class SmartCamera : MonoBehaviour
 		float distanceDisplacement = 0.0f;
 
 		for (int i = 0; i < m_CurrentPointsOfInterest.Count; i++)
-		{			
-			Vector3 currentDisplacement = Vector3.zero;
-			float currentDistanceDisplacement = 0.0f;
-			m_CurrentPointsOfInterest[i].GetInfluencedDisplacementAndDistance(m_MainTarget.position, m_DefaultDistance, out currentDisplacement, out currentDistanceDisplacement);
+		{
+			if (m_CurrentPointsOfInterest[i].isActiveAndEnabled)
+			{
+				Vector3 currentDisplacement = Vector3.zero;
+				float currentDistanceDisplacement = 0.0f;
+				m_CurrentPointsOfInterest[i].GetInfluencedDisplacementAndDistance(m_MainTarget.position, m_DefaultDistance, out currentDisplacement, out currentDistanceDisplacement);
 
-			displacement += currentDisplacement;
-			distanceDisplacement += currentDistanceDisplacement;
+				displacement += currentDisplacement;
+				distanceDisplacement += currentDistanceDisplacement;
+			}
 		}
 
 		m_TargetPosition.Value = m_MainTarget.position + displacement;
 		m_TargetDistance.Value = m_DefaultDistance + distanceDisplacement;
+
+		m_TargetPosition.SetTrackingRate(m_TargetPositionSmoothRate);
+		m_TargetDistance.SetTrackingRate(m_TargetDistanceSmoothRate);
 
 		m_TargetPosition.Update(Time.deltaTime);
 		m_TargetDistance.Update(Time.deltaTime);

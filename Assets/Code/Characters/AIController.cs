@@ -9,6 +9,9 @@ public class AIController : Controller
 	public float m_DelayBetweenJumps = -1.0f;
 	private float m_CurrentJumpDelay = 0.0f;
 
+	private Transform m_TargetPosition = null;
+	public bool m_HasReachedDestination = false;
+
 	void Start()
 	{
 		m_CurrentJumpDelay = m_DelayBetweenJumps;
@@ -16,6 +19,17 @@ public class AIController : Controller
 
 	protected override void Update()
 	{
+		if(m_TargetPosition != null && Mathf.Abs((m_TargetPosition.position.x - transform.position.x)) > 0.1f)
+		{
+			m_HasReachedDestination = false;
+			m_Direction = m_TargetPosition.position.x - transform.position.x < 0 ? -1 : 1;
+		}
+		else if(m_TargetPosition != null)
+		{
+			m_HasReachedDestination = true;
+			m_Direction = 0;
+		}
+
 		m_moveAxis = m_Direction;
 
 		if(m_CurrentJumpDelay >= 0.0f)
@@ -29,5 +43,11 @@ public class AIController : Controller
 		}
 
 		base.Update();
+	}
+
+	public void SetTargetPosition(Transform target)
+	{
+		m_TargetPosition = target;
+		m_HasReachedDestination = false;
 	}
 }

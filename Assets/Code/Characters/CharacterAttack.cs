@@ -26,7 +26,7 @@ public class CharacterAttack : MonoBehaviour
 			}			
 		}
 
-		if(m_Attack.State != AttackState.Idle)
+		if(m_Attack != null && m_Attack.State != AttackState.Idle)
 		{
 			if (m_Character) m_Character.IsAttacking = true;
 		}

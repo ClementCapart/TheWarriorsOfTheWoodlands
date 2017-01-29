@@ -6,6 +6,7 @@ public class CharacterAnimator : MonoBehaviour
 {
 	private CharacterDataModule m_Character = null;
 	public bool m_HasAlreadyAttacked = false;
+	public bool m_LoopAttack = false;
 	private Animator m_Animator = null;
 
 	void Start()
@@ -29,7 +30,7 @@ public class CharacterAnimator : MonoBehaviour
 
 			transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * m_Character.Direction, transform.localScale.y, transform.localScale.z);
 
-			if (m_Character.IsAttacking && !m_HasAlreadyAttacked)
+			if (m_Character.IsAttacking && (m_LoopAttack || !m_HasAlreadyAttacked))
 			{
 				m_HasAlreadyAttacked = true;
 				m_Animator.SetTrigger("Attack");

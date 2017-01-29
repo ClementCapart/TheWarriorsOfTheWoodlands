@@ -91,6 +91,7 @@ GameObject:
   - component: {fileID: 114828845094029924}
   - component: {fileID: 114539345061483612}
   - component: {fileID: 114589429704539868}
+  - component: {fileID: 114913079008384264}
   m_Layer: 11
   m_Name: SwordSlasher
   m_TagString: Untagged
@@ -178,6 +179,23 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &1805528526153460
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4452033447394622}
+  - component: {fileID: 114887973707501754}
+  - component: {fileID: 61040234975976740}
+  m_Layer: 11
+  m_Name: Attack
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &1998499010053672
 GameObject:
   m_ObjectHideFlags: 1
@@ -214,10 +232,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1477771601955154}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 34.76, y: 3.37, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 0.8}
   m_Children:
   - {fileID: 4761487171664802}
+  - {fileID: 4452033447394622}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -234,6 +253,19 @@ Transform:
   m_Father: {fileID: 4761487171664802}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 28.854002}
+--- !u!4 &4452033447394622
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1805528526153460}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 3.7, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 4127865092472278}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &4757756964891514
 Transform:
   m_ObjectHideFlags: 1
@@ -367,6 +399,20 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
+--- !u!61 &61040234975976740
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1805528526153460}
+  m_Enabled: 0
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 0.0001, y: 0.0001}
 --- !u!70 &70561075073978240
 CapsuleCollider2D:
   m_ObjectHideFlags: 1
@@ -379,7 +425,7 @@ CapsuleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_Offset: {x: -0.05, y: -0.6124582}
-  m_Size: {x: 3, y: 5}
+  m_Size: {x: 3, y: 5.97}
   m_Direction: 0
 --- !u!95 &95428836386510904
 Animator:
@@ -456,6 +502,35 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_StartingHealthPoints: 10000
+--- !u!114 &114887973707501754
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1805528526153460}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 837ff05495464c1429c82b2ee327e7eb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Cooldown: 1
+  m_Duration: 0.5
+  m_Damage: 50
+  m_Collider: {fileID: 61040234975976740}
+--- !u!114 &114913079008384264
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1477771601955154}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 729f241b38cd5e147ae776fee7eccab1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Character: {fileID: 114539345061483612}
+  m_Controller: {fileID: 114964003104428248}
+  m_Attack: {fileID: 114887973707501754}
 --- !u!114 &114964003104428248
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -467,10 +542,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ba6d5dfa9a8b54b98ff9f29892f398, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_MaxJumpRequestDelay: 0.1
-  m_MaxAttackRequestDelay: 0.1
-  m_Direction: -1
-  m_DelayBetweenJumps: 3
+  m_MaxJumpRequestDelay: 0
+  m_MaxAttackRequestDelay: 0
+  m_Direction: 0
+  m_DelayBetweenJumps: -1
+  m_HasReachedDestination: 0
 --- !u!212 &212013891912882730
 SpriteRenderer:
   m_ObjectHideFlags: 1
