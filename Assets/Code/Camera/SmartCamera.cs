@@ -41,6 +41,18 @@ public class SmartCamera : MonoBehaviour
 		m_TargetDistance.SetNow(distance);
 	}
 
+	public IEnumerator SetTargetAndWaitForSettle(Transform target)
+	{
+		m_MainTarget = target;
+		yield return 0;
+
+		while(!m_TargetPosition.IsAlmostDone(0.5f))
+		{
+			yield return 0;
+		}
+	}
+
+
     private void FixedUpdate()
     {
 		Vector3 displacement = Vector3.zero;

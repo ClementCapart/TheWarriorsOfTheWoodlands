@@ -21,21 +21,11 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 	public float m_TextSpeed = 30.0f;
 
+	public PlayerController[] m_Controllers = null;
+
 	void Awake()
 	{
 		StartCoroutine(IntroScript());
-	}
-
-	[ContextMenu("Focus on Sword Slasher")]
-	public void FocusOnSwordSlasher()
-	{
-		m_GameCamera.m_MainTarget = m_ScriptedSwordSlasherPoint.transform;
-	}
-
-	[ContextMenu("Focus on House")]
-	public void FocusOnHouse()
-	{
-		m_GameCamera.m_MainTarget = m_ScriptedHousePoint.transform;
 	}
 
 	IEnumerator IntroScript()
@@ -43,10 +33,17 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		m_GameplayPointsOfInterest.SetActive(false);
 		m_Enemies.SetActive(false);
 
+		m_Controllers = FindObjectsOfType<PlayerController>();
+
+		for(int i = 0; i < m_Controllers.Length; i++)
+		{
+			m_Controllers[i].LockControl();
+		}
+
 		GameObject obj = Instantiate<GameObject>(m_GameCameraPrefab);
 		m_GameCamera = obj.GetComponent<SmartCamera>();
 		m_GameCamera.SetPosition(m_ScriptedHousePoint.transform.position, m_ScriptedHousePoint.m_Distance);
-		m_GameCamera.m_MainTarget = m_ScriptedHousePoint.transform;
+		yield return m_GameCamera.SetTargetAndWaitForSettle(m_ScriptedHousePoint.transform);
 		m_GameCamera.m_TargetPositionSmoothRate = m_ScriptedCameraSmoothingRate;
 
 		if(TextBox.Instance != null)
@@ -60,10 +57,9 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		}
 
 		m_Enemies.SetActive(true);
-
-		FocusOnSwordSlasher();		
-
 		m_SwordSlasherAIController.SetTargetPosition(m_SwordSlasherTargetPosition);
+
+		yield return m_GameCamera.SetTargetAndWaitForSettle(m_ScriptedSwordSlasherPoint.transform);		
 		
 		while(!m_SwordSlasherAIController.m_HasReachedDestination)
 		{
@@ -74,7 +70,12 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 		yield return new WaitForSeconds(3.0f);
 
-		FocusOnHouse();
+		yield return m_GameCamera.SetTargetAndWaitForSettle(m_ScriptedHousePoint.transform);
+
+		for (int i = 0; i < m_Controllers.Length; i++)
+		{
+			m_Controllers[i].UnlockControl();
+		}
 	}
 
 }

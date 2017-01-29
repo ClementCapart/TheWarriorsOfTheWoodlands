@@ -99,6 +99,17 @@ public class SmoothPosition
 		}
 	}
 
+	public bool IsAlmostDone(float tolerance)
+	{
+		Vector3 gapLine = (m_Target - m_Curr);
+		if(gapLine.magnitude < tolerance)
+		{
+			return true;
+		}
+
+		return false;
+	}
+
 	//------------------------------------------------------------------------
 	//------------------------------------------------------------------------ 
 	public void SetNow(Vector3 val)

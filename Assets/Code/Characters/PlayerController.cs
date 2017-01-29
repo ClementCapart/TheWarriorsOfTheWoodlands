@@ -26,38 +26,54 @@ public class PlayerController : Controller
 	public KeyCode m_JumpKeyboard = KeyCode.Space;
 	public KeyCode m_AttackKeyboard = KeyCode.LeftControl;
 
+	private bool m_Locked = false;
+
 	protected override void Update()
 	{
-		if((m_ControlDevice & ControlDevice.Joystic) != 0)
+		if (!m_Locked)
 		{
-			m_moveAxis = XInput.GetAxis(m_MoveAxisControl, m_PlayerIndex);
-
-			if(XInput.GetButtonDown(m_JumpButton, m_PlayerIndex))
+			if ((m_ControlDevice & ControlDevice.Joystic) != 0)
 			{
-				RequestJump();
+				m_moveAxis = XInput.GetAxis(m_MoveAxisControl, m_PlayerIndex);
+
+				if (XInput.GetButtonDown(m_JumpButton, m_PlayerIndex))
+				{
+					RequestJump();
+				}
+
+				if (XInput.GetButtonDown(m_AttackButton, m_PlayerIndex))
+				{
+					RequestAttack();
+				}
 			}
 
-			if(XInput.GetButtonDown(m_AttackButton, m_PlayerIndex))
+			if ((m_ControlDevice & ControlDevice.Keyboard) != 0)
 			{
-				RequestAttack();
-			}
-		}
+				m_moveAxis += Input.GetKey(m_MoveLeftKeyboard) ? -1.0f : Input.GetKey(m_MoveRightKeyboard) ? 1.0f : 0.0f;
 
-		if ((m_ControlDevice & ControlDevice.Keyboard) != 0)
-		{
-			m_moveAxis += Input.GetKey(m_MoveLeftKeyboard) ? -1.0f : Input.GetKey(m_MoveRightKeyboard) ? 1.0f : 0.0f;
+				if (Input.GetKeyDown(m_JumpKeyboard))
+				{
+					RequestJump();
+				}
 
-			if(Input.GetKeyDown(m_JumpKeyboard))
-			{
-				RequestJump();
-			}
-
-			if (Input.GetKeyDown(m_AttackKeyboard))
-			{
-				RequestAttack();
+				if (Input.GetKeyDown(m_AttackKeyboard))
+				{
+					RequestAttack();
+				}
 			}
 		}
 
 		base.Update();
 	}
+
+	public void LockControl()
+	{
+		m_Locked = true;
+	}
+
+	public void UnlockControl()
+	{
+		m_Locked = false;
+	}
+
 }
