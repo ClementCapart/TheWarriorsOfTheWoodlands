@@ -39,12 +39,36 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: Background
+  - name: BG_Far
     uniqueID: 2694244683
     locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Foreground
+  - name: BG_Mid
     uniqueID: 2091445963
+    locked: 0
+  - name: BG_Front
+    uniqueID: 1473243369
+    locked: 0
+  - name: Enemy_Back
+    uniqueID: 2725756579
+    locked: 0
+  - name: Enemy_Mid
+    uniqueID: 2832616785
+    locked: 0
+  - name: Enemy_Front
+    uniqueID: 1708925217
+    locked: 0
+  - name: Player_Back
+    uniqueID: 1225235627
+    locked: 0
+  - name: Player_Mid
+    uniqueID: 1374969739
+    locked: 0
+  - name: Player_Front
+    uniqueID: 2314193419
+    locked: 0
+  - name: Foreground
+    uniqueID: 3026781661
     locked: 0
