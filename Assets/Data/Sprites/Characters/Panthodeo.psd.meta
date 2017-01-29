@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 264814d959a26d243ab0d341ae0de7c5
-timeCreated: 1485120333
+timeCreated: 1485702753
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -12,6 +12,10 @@ TextureImporter:
     21300010: Panthodeo_ArmL
     21300012: Panthodeo_ArmR
     21300014: Panthodeo_Tail
+    21300016: Panthodeo_0
+    21300018: Panthodeo_EyeHurtL
+    21300020: Panthodeo_EyeHurtR
+    21300022: Panthodeo_MouthHurt
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -81,12 +85,12 @@ TextureImporter:
       name: Panthodeo_LegL
       rect:
         serializedVersion: 2
-        x: 23
-        y: 298
-        width: 177
+        x: 0
+        y: 312
+        width: 161
         height: 200
       alignment: 9
-      pivot: {x: 0.72297746, y: 0.8608412}
+      pivot: {x: 0.7824468, y: 0.8648306}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -94,12 +98,12 @@ TextureImporter:
       name: Panthodeo_LegR
       rect:
         serializedVersion: 2
-        x: 216
-        y: 320
+        x: 169
+        y: 357
         width: 177
-        height: 178
+        height: 155
       alignment: 9
-      pivot: {x: 0.25153932, y: 0.8610946}
+      pivot: {x: 0.233508, y: 0.8655771}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -107,7 +111,7 @@ TextureImporter:
       name: Panthodeo_Main
       rect:
         serializedVersion: 2
-        x: 470
+        x: 517
         y: 10
         width: 409
         height: 493
@@ -120,8 +124,8 @@ TextureImporter:
       name: Panthodeo_Hypno1
       rect:
         serializedVersion: 2
-        x: 891
-        y: 246
+        x: 929
+        y: 7
         width: 93
         height: 97
       alignment: 9
@@ -133,8 +137,8 @@ TextureImporter:
       name: Panthodeo_Hypno2
       rect:
         serializedVersion: 2
-        x: 900
-        y: 136
+        x: 934
+        y: 113
         width: 90
         height: 93
       alignment: 9
@@ -146,9 +150,9 @@ TextureImporter:
       name: Panthodeo_ArmL
       rect:
         serializedVersion: 2
-        x: 18
-        y: 14
-        width: 152
+        x: 0
+        y: 0
+        width: 140
         height: 269
       alignment: 9
       pivot: {x: 0.8115817, y: 0.8227785}
@@ -159,12 +163,12 @@ TextureImporter:
       name: Panthodeo_ArmR
       rect:
         serializedVersion: 2
-        x: 184
-        y: 14
-        width: 133
+        x: 137
+        y: 2
+        width: 120
         height: 266
       alignment: 9
-      pivot: {x: 0.2795611, y: 0.74587387}
+      pivot: {x: 0.22600149, y: 0.67458606}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -172,12 +176,64 @@ TextureImporter:
       name: Panthodeo_Tail
       rect:
         serializedVersion: 2
-        x: 339
-        y: 12
-        width: 103
-        height: 276
+        x: 229
+        y: 255
+        width: 276
+        height: 100
       alignment: 9
-      pivot: {x: 0.52189565, y: 0.07101057}
+      pivot: {x: 0.11062268, y: 0.55562013}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Panthodeo_0
+      rect:
+        serializedVersion: 2
+        x: 937
+        y: 407
+        width: 54
+        height: 41
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Panthodeo_EyeHurtL
+      rect:
+        serializedVersion: 2
+        x: 277
+        y: 145
+        width: 72
+        height: 71
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Panthodeo_EyeHurtR
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 153
+        width: 90
+        height: 69
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: Panthodeo_MouthHurt
+      rect:
+        serializedVersion: 2
+        x: 269
+        y: 14
+        width: 212
+        height: 112
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
