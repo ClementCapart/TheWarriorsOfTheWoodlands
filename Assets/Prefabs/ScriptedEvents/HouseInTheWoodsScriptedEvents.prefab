@@ -55,6 +55,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4646431763803238}
   - component: {fileID: 114464733985485364}
+  - component: {fileID: 82668013707621918}
   m_Layer: 0
   m_Name: HouseInTheWoodsScriptedEvents
   m_TagString: Untagged
@@ -274,6 +275,86 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
+--- !u!82 &82668013707621918
+AudioSource:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1167155045872844}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 0}
+  m_PlayOnAwake: 0
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 1
+  BypassListenerEffects: 1
+  BypassReverbZones: 1
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    - serializedVersion: 2
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 2
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 0
 --- !u!95 &95537343722003026
 Animator:
   serializedVersion: 3
@@ -434,6 +515,12 @@ MonoBehaviour:
   - Ziggy reminded Panthodeo.
   m_DelayBetweenTexts: 3
   m_TextSpeed: 20
+  m_AudioSource: {fileID: 82668013707621918}
+  m_StartAdventureTheme: {fileID: 8300000, guid: 6e4032cdecf0f3d4c9fe87f696e0076b,
+    type: 3}
+  m_SwordSlasherTheme: {fileID: 8300000, guid: c9fe3847ee67ce64fabb3be6077053c8, type: 3}
+  m_EscapeTheme: {fileID: 8300000, guid: 88b72cb371949d2458267ba1b49900e5, type: 3}
+  m_VictoryTheme: {fileID: 8300000, guid: 6e4032cdecf0f3d4c9fe87f696e0076b, type: 3}
 --- !u!114 &114490554668664430
 MonoBehaviour:
   m_ObjectHideFlags: 1

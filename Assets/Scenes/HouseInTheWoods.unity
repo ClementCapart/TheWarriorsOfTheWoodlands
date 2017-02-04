@@ -24256,10 +24256,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 1477771601955154, guid: 3bc62635fc5a3b04dbd741cfa8e2362e, type: 2}
-      propertyPath: m_Name
-      value: SwordSlasher
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3bc62635fc5a3b04dbd741cfa8e2362e, type: 2}
   m_IsPrefabParent: 0

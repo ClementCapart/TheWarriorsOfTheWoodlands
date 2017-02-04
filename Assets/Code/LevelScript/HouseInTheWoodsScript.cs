@@ -40,6 +40,12 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 	public float m_TextSpeed = 30.0f;
 
+	public AudioSource m_AudioSource = null;
+	public AudioClip m_StartAdventureTheme = null;
+	public AudioClip m_SwordSlasherTheme = null;
+	public AudioClip m_EscapeTheme = null;
+	public AudioClip m_VictoryTheme = null;
+
 	private PlayerController[] m_Controllers = null;
 
 	void Start()
@@ -56,6 +62,9 @@ public class HouseInTheWoodsScript : MonoBehaviour
 	{
 		m_GameplayPointsOfInterest.SetActive(false);
 		m_Enemies.SetActive(false);
+
+		m_AudioSource.clip = m_StartAdventureTheme;
+		m_AudioSource.Play();
 
 		m_Controllers = FindObjectsOfType<PlayerController>();
 
@@ -82,6 +91,10 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 		m_Enemies.SetActive(true);
 		m_SwordSlasherAIController.SetTargetPosition(m_SwordSlasherTargetPosition);
+
+		m_AudioSource.Stop();
+		m_AudioSource.clip = m_SwordSlasherTheme;
+		m_AudioSource.Play();
 
 		yield return m_GameCamera.SetTargetAndWaitForSettle(m_ScriptedSwordSlasherPoint.transform);
 
@@ -182,6 +195,10 @@ public class HouseInTheWoodsScript : MonoBehaviour
 			m_Controllers[i].UnlockControl();
 		}
 
+		m_AudioSource.Stop();
+		m_AudioSource.clip = m_EscapeTheme;
+		m_AudioSource.Play();
+
 		yield return new WaitForSeconds(1.0f);
 
 		m_ToetoebowWallController.SetTargetPosition(m_ToetoebowWallSecondTargetPosition);
@@ -217,6 +234,10 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		{
 			m_Controllers[i].gameObject.SetActive(true);
 		}
+
+		m_AudioSource.Stop();
+		m_AudioSource.clip = m_VictoryTheme;
+		m_AudioSource.Play();
 	}
 
 }
