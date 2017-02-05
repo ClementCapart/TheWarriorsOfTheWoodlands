@@ -1485,11 +1485,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &51341910
 Animator:
   serializedVersion: 3
@@ -2077,11 +2080,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &79984132
 Animator:
   serializedVersion: 3
@@ -3102,11 +3108,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &125416725
 Animator:
   serializedVersion: 3
@@ -3180,11 +3189,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &126542127
 Animator:
   serializedVersion: 3
@@ -5698,11 +5710,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &219377498
 Animator:
   serializedVersion: 3
@@ -7260,11 +7275,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &282213946
 Animator:
   serializedVersion: 3
@@ -7467,11 +7485,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &289598469
 Animator:
   serializedVersion: 3
@@ -9327,11 +9348,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &385526633
 Animator:
   serializedVersion: 3
@@ -10362,11 +10386,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!114 &427395640
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10683,11 +10710,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &433042462
 Animator:
   serializedVersion: 3
@@ -11492,11 +11522,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &458558868
 Animator:
   serializedVersion: 3
@@ -12890,11 +12923,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &521200809
 Animator:
   serializedVersion: 3
@@ -13161,11 +13197,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &536552276
 Animator:
   serializedVersion: 3
@@ -15184,11 +15223,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &646353999
 Animator:
   serializedVersion: 3
@@ -15977,11 +16019,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &680796502
 Animator:
   serializedVersion: 3
@@ -16916,11 +16961,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &714758352
 Animator:
   serializedVersion: 3
@@ -17251,11 +17299,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &729631793
 Animator:
   serializedVersion: 3
@@ -18108,20 +18159,6 @@ Prefab:
     - target: {fileID: 4669051182648716, guid: 30a88c5c564894745a78f8a4f5f7cc01, type: 2}
       propertyPath: m_RootOrder
       value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 1315565718792260, guid: 30a88c5c564894745a78f8a4f5f7cc01, type: 2}
-      propertyPath: m_IsActive
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114524504865433294, guid: 30a88c5c564894745a78f8a4f5f7cc01,
-        type: 2}
-      propertyPath: m_Impulse.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 114524504865433294, guid: 30a88c5c564894745a78f8a4f5f7cc01,
-        type: 2}
-      propertyPath: m_Impulse.x
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30a88c5c564894745a78f8a4f5f7cc01, type: 2}
@@ -21613,11 +21650,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &816867731
 Animator:
   serializedVersion: 3
@@ -23798,11 +23838,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &930493360
 Animator:
   serializedVersion: 3
@@ -26181,11 +26224,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1052806812
 Animator:
   serializedVersion: 3
@@ -26774,11 +26820,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1084206712
 Animator:
   serializedVersion: 3
@@ -26980,11 +27029,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1097615029
 Animator:
   serializedVersion: 3
@@ -27250,11 +27302,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1103248365
 Animator:
   serializedVersion: 3
@@ -27655,11 +27710,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1117811271
 Animator:
   serializedVersion: 3
@@ -28513,11 +28571,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1154741975
 Animator:
   serializedVersion: 3
@@ -28591,11 +28652,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1155583779
 Animator:
   serializedVersion: 3
@@ -29054,11 +29118,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1186121511
 Animator:
   serializedVersion: 3
@@ -29398,11 +29465,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!70 &1221831917
 CapsuleCollider2D:
   m_ObjectHideFlags: 0
@@ -30512,11 +30582,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1286257513
 Animator:
   serializedVersion: 3
@@ -31194,11 +31267,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1311670079
 Animator:
   serializedVersion: 3
@@ -31644,11 +31720,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1326749868
 Animator:
   serializedVersion: 3
@@ -31786,11 +31865,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1329742869
 Animator:
   serializedVersion: 3
@@ -32581,11 +32663,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1381115166
 Animator:
   serializedVersion: 3
@@ -32982,11 +33067,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1399407287
 Animator:
   serializedVersion: 3
@@ -33496,6 +33584,11 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 114299410352813782, guid: 83c79a477ab87d54e857963463cdc328,
+        type: 2}
+      propertyPath: Name
+      value: Panthodeo
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83c79a477ab87d54e857963463cdc328, type: 2}
   m_IsPrefabParent: 0
@@ -33625,11 +33718,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1439122428
 Animator:
   serializedVersion: 3
@@ -33896,11 +33992,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1443794801
 Animator:
   serializedVersion: 3
@@ -35394,11 +35493,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1548324662
 Animator:
   serializedVersion: 3
@@ -36639,11 +36741,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1621169625
 Animator:
   serializedVersion: 3
@@ -36750,6 +36855,10 @@ Prefab:
       propertyPath: m_HouseAnimator
       value: 
       objectReference: {fileID: 1313494595}
+    - target: {fileID: 1445592649652996, guid: 0b29233192b3a14498325d48eaf5fc43, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b29233192b3a14498325d48eaf5fc43, type: 2}
   m_IsPrefabParent: 0
@@ -36809,11 +36918,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1625227999
 Animator:
   serializedVersion: 3
@@ -37287,6 +37399,106 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &1644530099
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_Pivot.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 224665055189782816, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_Pivot.y
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 49e97648ae04c604487b8364f76bb5a8, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &1644819811
 GameObject:
   m_ObjectHideFlags: 0
@@ -38468,11 +38680,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1695439542
 Animator:
   serializedVersion: 3
@@ -38702,11 +38917,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1714951408
 Animator:
   serializedVersion: 3
@@ -39043,11 +39261,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1729918571
 Animator:
   serializedVersion: 3
@@ -39121,11 +39342,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1731359557
 Animator:
   serializedVersion: 3
@@ -39713,11 +39937,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1756019311
 Animator:
   serializedVersion: 3
@@ -39856,11 +40083,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1761166449
 Animator:
   serializedVersion: 3
@@ -39934,11 +40164,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1762897951
 Animator:
   serializedVersion: 3
@@ -41377,11 +41610,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1848187803
 Animator:
   serializedVersion: 3
@@ -41455,11 +41691,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1849796049
 Animator:
   serializedVersion: 3
@@ -41597,11 +41836,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1858360327
 Animator:
   serializedVersion: 3
@@ -41939,11 +42181,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1869282233
 Animator:
   serializedVersion: 3
@@ -42408,11 +42653,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1882246813
 Animator:
   serializedVersion: 3
@@ -42809,11 +43057,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1902389702
 Animator:
   serializedVersion: 3
@@ -43021,11 +43272,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1905709151
 Animator:
   serializedVersion: 3
@@ -43519,11 +43773,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1925216157
 Animator:
   serializedVersion: 3
@@ -44353,11 +44610,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1957588665
 Animator:
   serializedVersion: 3
@@ -47881,11 +48141,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &1984454208
 Animator:
   serializedVersion: 3
@@ -48986,11 +49249,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &2027831408
 Animator:
   serializedVersion: 3
@@ -50514,11 +50780,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &2116700767
 Animator:
   serializedVersion: 3
@@ -50592,11 +50861,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6a39b8b096594db4788f6488165245c9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  Name: 
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
   IsDead: 0
   Direction: 1
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!95 &2124766469
 Animator:
   serializedVersion: 3

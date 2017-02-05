@@ -11,6 +11,8 @@ public class Health : MonoBehaviour
 	{
 		m_CurrentHealthPoints = m_StartingHealthPoints;
 		m_Character = GetComponent<CharacterDataModule>();
+		m_Character.CurrentHealthPoints = m_CurrentHealthPoints;
+		m_Character.MaxHealthPoints = m_StartingHealthPoints;
 	}
 
 	public void TakeDamage(float value)
@@ -26,6 +28,8 @@ public class Health : MonoBehaviour
 			m_CurrentHealthPoints = 0.0f;
 			Die();
 		}
+
+		m_Character.CurrentHealthPoints = m_CurrentHealthPoints;
 	}
 
 	public void Die()
