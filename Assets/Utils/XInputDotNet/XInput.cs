@@ -104,7 +104,17 @@ public class XInput : MonoBehaviour
                 {
                     switch (button)
                     {
-                        case Buttons.A:
+						case Buttons.None:
+							bool anyPressed = false;
+							anyPressed |= m_instance.m_gamepadsState[playerIndex].Buttons.A == ButtonState.Pressed && m_instance.m_previousGamepadsState[playerIndex].Buttons.A == ButtonState.Released;
+							anyPressed |= m_instance.m_gamepadsState[playerIndex].Buttons.B == ButtonState.Pressed && m_instance.m_previousGamepadsState[playerIndex].Buttons.B == ButtonState.Released;
+							anyPressed |= m_instance.m_gamepadsState[playerIndex].Buttons.X == ButtonState.Pressed && m_instance.m_previousGamepadsState[playerIndex].Buttons.X == ButtonState.Released;
+							anyPressed |= m_instance.m_gamepadsState[playerIndex].Buttons.Y == ButtonState.Pressed && m_instance.m_previousGamepadsState[playerIndex].Buttons.Y == ButtonState.Released;
+							anyPressed |= m_instance.m_gamepadsState[playerIndex].Buttons.Start == ButtonState.Pressed && m_instance.m_previousGamepadsState[playerIndex].Buttons.Start == ButtonState.Released;
+							anyPressed |= m_instance.m_gamepadsState[playerIndex].Buttons.Back == ButtonState.Pressed && m_instance.m_previousGamepadsState[playerIndex].Buttons.Back == ButtonState.Released;
+							return anyPressed;
+
+						case Buttons.A:
                             return m_instance.m_gamepadsState[playerIndex].Buttons.A == ButtonState.Pressed && m_instance.m_previousGamepadsState[playerIndex].Buttons.A == ButtonState.Released;
 
                         case Buttons.B:

@@ -51,6 +51,7 @@ public class HouseInTheWoodsScript : MonoBehaviour
 	void Start()
 	{
 		StartCoroutine(IntroScript());
+		FadeScreen.FadeFromBlack(1.0f);
 	}
 
 	public void GetBackToHouse()

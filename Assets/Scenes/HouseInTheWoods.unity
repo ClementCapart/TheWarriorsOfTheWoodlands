@@ -36855,10 +36855,6 @@ Prefab:
       propertyPath: m_HouseAnimator
       value: 
       objectReference: {fileID: 1313494595}
-    - target: {fileID: 1445592649652996, guid: 0b29233192b3a14498325d48eaf5fc43, type: 2}
-      propertyPath: m_IsActive
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b29233192b3a14498325d48eaf5fc43, type: 2}
   m_IsPrefabParent: 0
