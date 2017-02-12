@@ -18160,6 +18160,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1315565718792260, guid: 30a88c5c564894745a78f8a4f5f7cc01, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 30a88c5c564894745a78f8a4f5f7cc01, type: 2}
   m_IsPrefabParent: 0
@@ -18361,6 +18365,11 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &783059185 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1890831386999402, guid: 83c79a477ab87d54e857963463cdc328,
+    type: 2}
+  m_PrefabInternal: {fileID: 1430964724}
 --- !u!1 &790136246
 GameObject:
   m_ObjectHideFlags: 0
@@ -36855,6 +36864,16 @@ Prefab:
       propertyPath: m_HouseAnimator
       value: 
       objectReference: {fileID: 1313494595}
+    - target: {fileID: 114464733985485364, guid: 0b29233192b3a14498325d48eaf5fc43,
+        type: 2}
+      propertyPath: m_Panthodeo
+      value: 
+      objectReference: {fileID: 783059185}
+    - target: {fileID: 114464733985485364, guid: 0b29233192b3a14498325d48eaf5fc43,
+        type: 2}
+      propertyPath: m_Ziggy
+      value: 
+      objectReference: {fileID: 1651306999}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b29233192b3a14498325d48eaf5fc43, type: 2}
   m_IsPrefabParent: 0
@@ -37492,6 +37511,31 @@ Prefab:
       propertyPath: m_Pivot.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 224295114334879020, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224295114334879020, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224486866519718240, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_AnchorMin.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224486866519718240, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_AnchorMax.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 224486866519718240, guid: 49e97648ae04c604487b8364f76bb5a8,
+        type: 2}
+      propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 49e97648ae04c604487b8364f76bb5a8, type: 2}
   m_IsPrefabParent: 0
@@ -37758,6 +37802,11 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1651306999 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1315565718792260, guid: 30a88c5c564894745a78f8a4f5f7cc01,
+    type: 2}
+  m_PrefabInternal: {fileID: 771212709}
 --- !u!1 &1654873150
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class HouseInTheWoodsScript : MonoBehaviour 
 {
+	public GameObject m_Panthodeo;
+	public GameObject m_Ziggy;
+
 	public GameObject m_GameCameraPrefab = null;
 	private SmartCamera m_GameCamera = null;
 	public PointOfInterest m_ScriptedSwordSlasherPoint = null;
@@ -52,6 +55,16 @@ public class HouseInTheWoodsScript : MonoBehaviour
 	{
 		StartCoroutine(IntroScript());
 		FadeScreen.FadeFromBlack(1.0f);
+
+		if(m_Panthodeo != null && ((GameSessionData.s_CurrentCharacters & Characters.Panthodeo) != 0))
+		{
+			m_Panthodeo.SetActive(true);
+		}
+
+		if (m_Ziggy!= null && ((GameSessionData.s_CurrentCharacters & Characters.Ziggy) != 0))
+		{
+			m_Ziggy.SetActive(true);
+		}
 	}
 
 	public void GetBackToHouse()
