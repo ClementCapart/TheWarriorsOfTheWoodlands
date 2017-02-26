@@ -64,7 +64,11 @@ public class StartMenuHandler : MonoBehaviour
 
 	void Update()
 	{
-		UpdateState();	
+		UpdateState();
+		if (Input.GetKeyDown(KeyCode.Escape))
+		{
+			Application.Quit();
+		}
 	}
 
 	void RequestState(StartMenuState newState)
