@@ -8,9 +8,11 @@ AnimatorOverrideController:
   m_Name: Ziggy
   m_Controller: {fileID: 9100000, guid: 29f6b00e804cf8a4b97fa182abc36ad1, type: 2}
   m_Clips:
-  - m_OriginalClip: {fileID: 7400000, guid: cd3730f9578b0be46bd8a92f88c4e912, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 09619a3c9dce47f42a81151accf045f5, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 09619a3c9dce47f42a81151accf045f5, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: d279b32731b30804286708a783baaeda, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 661b8168a8e5d7044b2fab0dfce856b4, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: 661b8168a8e5d7044b2fab0dfce856b4, type: 2}
-  - m_OriginalClip: {fileID: 7400000, guid: b489ad8ca2b210e4c8a8606810e584f6, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: b12ac6789f2dfd6488ccf14a012cd7be, type: 2}
     m_OverrideClip: {fileID: 7400000, guid: b12ac6789f2dfd6488ccf14a012cd7be, type: 2}
+  - m_OriginalClip: {fileID: 7400000, guid: 96905e92677d5d54b849738cf222c366, type: 2}
+    m_OverrideClip: {fileID: 7400000, guid: 134af2fe996d9204fb99cf076afb9fed, type: 2}

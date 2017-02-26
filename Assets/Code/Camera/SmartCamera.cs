@@ -24,7 +24,7 @@ public class SmartCamera : MonoBehaviour
 		{
 			m_TargetPosition = new SmoothPosition(m_TargetPositionSmoothRate);
 		}
-		if (m_TargetPosition == null)
+		if (m_TargetDistance == null)
 		{
 			m_TargetDistance = new SmoothFloat(m_TargetDistanceSmoothRate);
 		}
@@ -55,6 +55,14 @@ public class SmartCamera : MonoBehaviour
 
     private void FixedUpdate()
     {
+	    if (m_MainTarget == null)
+	    {
+		    PlayerController controller = FindObjectOfType<PlayerController>();
+		    if (controller != null)
+		    {
+			    m_MainTarget = controller.transform;
+		    }
+	    }
 		Vector3 displacement = Vector3.zero;
 		float distanceDisplacement = 0.0f;
 

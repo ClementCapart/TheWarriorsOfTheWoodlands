@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
 
 	public void TakeDamage(float value)
 	{
-		if(m_Character.IsDead)
+		if(m_Character.State == CharacterState.Dead)
 		{
 			return;
 		}
@@ -34,6 +34,6 @@ public class Health : MonoBehaviour
 
 	public void Die()
 	{
-		m_Character.IsDead = true;
+		m_Character.ChangeState(CharacterState.Dead);
 	}
 }

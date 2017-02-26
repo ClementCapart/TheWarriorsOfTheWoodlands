@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public abstract class Controller : MonoBehaviour 
+public abstract class Controller : MonoBehaviour
 {
+	public CharacterDataModule m_Character = null;
+
 	protected float m_moveAxis = 0.0f;
 	public float MoveAxis { get { return m_moveAxis; } }
 

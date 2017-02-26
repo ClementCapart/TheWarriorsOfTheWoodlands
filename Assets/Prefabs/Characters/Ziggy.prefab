@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114646490844752996}
   - component: {fileID: 114567859730030704}
   - component: {fileID: 114953100525189754}
+  - component: {fileID: 114928544182584928}
   m_Layer: 8
   m_Name: Ziggy
   m_TagString: Untagged
@@ -377,6 +378,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ed9780bf939dd4eaf6ee7d93936e0f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  m_Character: {fileID: 114953100525189754}
   m_MaxJumpRequestDelay: 0.1
   m_MaxAttackRequestDelay: 0.1
   m_ControlDevice: 3
@@ -399,11 +401,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 837ff05495464c1429c82b2ee327e7eb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Character: {fileID: 0}
+  m_Character: {fileID: 114953100525189754}
   m_Cooldown: 0.1
   m_Duration: 0.2
   m_Damage: 50
-  m_Impulse: {x: 1, y: 1, z: 0}
+  m_Impulse: {x: 3, y: 3, z: 0}
   m_Collider: {fileID: 61708029466542840}
 --- !u!114 &114567859730030704
 MonoBehaviour:
@@ -450,6 +452,20 @@ MonoBehaviour:
   m_DoubleJumpImpulse: 5
   m_GroundRaycastOffset: 0.01
   m_IsOnGround: 0
+--- !u!114 &114928544182584928
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1315565718792260}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b6a7c8ed25631a44871c48c5c15959e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Character: {fileID: 0}
+  m_Health: {fileID: 114066097349819734}
+  m_Rigidbody: {fileID: 50293856596626158}
 --- !u!114 &114953100525189754
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -462,12 +478,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: Ziggy
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
-  HealthPoints: 0
+  CurrentHealthPoints: 0
+  MaxHealthPoints: 0
 --- !u!212 &212106893015998242
 SpriteRenderer:
   m_ObjectHideFlags: 1

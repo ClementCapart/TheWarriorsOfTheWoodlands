@@ -2,6 +2,13 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+public enum CharacterState
+{
+	Default,
+	Hitlocked,
+	Dead,
+}
+
 public class CharacterDataModule : MonoBehaviour 
 {
 	static List<CharacterDataModule> s_AllCharacters = new List<CharacterDataModule>();
@@ -23,14 +30,21 @@ public class CharacterDataModule : MonoBehaviour
 
 	public string Name = "";
 
+	public CharacterState State = CharacterState.Default;
 	public bool IsMoving = false;
 	public bool IsAttacking = false;
 	public bool IsJumping = false;
-	public bool IsDead = false;
 	public int Direction = 1;
 
 	public float CurrentHealthPoints = 0;
 	public float MaxHealthPoints = 0;
+
+	public void ChangeState(CharacterState newState)
+	{
+		if (State == CharacterState.Dead)
+			return;
+		State = newState;
+	}
 
 	void Awake()
 	{

@@ -16,6 +16,11 @@ public class FadeScreen : MonoBehaviour
 
 	void Awake()
 	{
+		if (s_instance != null)
+		{
+			Destroy(this.gameObject);
+			return;
+		}
 		DontDestroyOnLoad(gameObject);
 		s_instance = this;
 		m_BlackScreen = GetComponentInChildren<UnityEngine.UI.Image>();

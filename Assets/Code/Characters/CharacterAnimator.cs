@@ -9,15 +9,15 @@ public class CharacterAnimator : MonoBehaviour
 	public bool m_LoopAttack = false;
 	private Animator m_Animator = null;
 
-	void Start()
+	private void Start()
 	{
 		m_Character = GetComponent<CharacterDataModule>();
 		m_Animator = GetComponent<Animator>();
 	}
 
-	void Update()
+	private void Update()
 	{
-		if (!m_Character.IsDead)
+		if (m_Character.State == CharacterState.Default)
 		{
 			if (m_Character.IsMoving)
 			{
@@ -28,7 +28,8 @@ public class CharacterAnimator : MonoBehaviour
 				m_Animator.SetBool("Walk", false);
 			}
 
-			transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * m_Character.Direction, transform.localScale.y, transform.localScale.z);
+			transform.localScale = new Vector3(Mathf.Abs(transform.localScale.x) * m_Character.Direction, transform.localScale.y,
+				transform.localScale.z);
 
 			if (m_Character.IsAttacking && (m_LoopAttack || !m_HasAlreadyAttacked))
 			{
@@ -40,17 +41,16 @@ public class CharacterAnimator : MonoBehaviour
 				m_HasAlreadyAttacked = false;
 			}
 		}
-		else
+		else if(m_Character.State == CharacterState.Dead)
 		{
-			if(!m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
+			if (!m_Animator.GetCurrentAnimatorStateInfo(0).IsName("Death"))
 			{
 				m_Animator.SetTrigger("Death");
 			}
-			else if(m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
+			else if (m_Animator.GetCurrentAnimatorStateInfo(0).normalizedTime >= 1.0f)
 			{
 				Destroy(gameObject);
 			}
-			
 		}
 	}
 }

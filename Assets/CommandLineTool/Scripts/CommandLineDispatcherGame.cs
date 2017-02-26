@@ -5,8 +5,16 @@ using System.Linq;
 
 public class CommandLineDispatcherGame : MonoBehaviour
 {
+	private static CommandLineDispatcherGame s_instance = null;
+
     private void Awake()
     {
+	    if (s_instance != null)
+	    {
+		    Destroy(this.gameObject);
+		    return;
+	    }
+	    s_instance = this;
         DontDestroyOnLoad(gameObject);
 #if !UNITY_EDITOR
 		CommandLineHandler.Initialize();

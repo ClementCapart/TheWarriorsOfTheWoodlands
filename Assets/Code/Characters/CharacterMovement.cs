@@ -32,35 +32,39 @@ public class CharacterMovement : MonoBehaviour
 	void FixedUpdate()
 	{
 		if (m_CharacterController == null) return;
-		float horizontalAxis = m_CharacterController.MoveAxis;		
-
-		Vector2 finalForce = Vector2.zero;
-		finalForce.x = horizontalAxis * m_HorizontalAcceleration * Time.fixedDeltaTime;		
-
-		m_Rigidbody.velocity = m_Rigidbody.velocity + finalForce;
-		m_Rigidbody.velocity = new Vector2(Mathf.Clamp(m_Rigidbody.velocity.x, -m_MaxHorizontalSpeed, m_MaxHorizontalSpeed), m_Rigidbody.velocity.y);
-
-		if(m_IsOnGround)
+		if (m_Character.State == CharacterState.Default)
 		{
-			m_HasAlreadyDoubleJumped = false;
-		}
+			float horizontalAxis = m_CharacterController.MoveAxis;
 
-		if(m_CharacterController.JumpRequested)
-		{			
+			Vector2 finalForce = Vector2.zero;
+			finalForce.x = horizontalAxis * m_HorizontalAcceleration * Time.fixedDeltaTime;
+
+			m_Rigidbody.velocity = m_Rigidbody.velocity + finalForce;
+			m_Rigidbody.velocity = new Vector2(Mathf.Clamp(m_Rigidbody.velocity.x, -m_MaxHorizontalSpeed, m_MaxHorizontalSpeed),
+				m_Rigidbody.velocity.y);
+
 			if (m_IsOnGround)
 			{
-				m_Rigidbody.velocity = new Vector2(m_Rigidbody.velocity.x, 0.0f);
-				m_Rigidbody.AddForce(Vector2.up * m_JumpImpulse, ForceMode2D.Impulse);
-				m_CharacterController.CancelJumpRequest();
-			}			
-			else if(m_AllowDoubleJump)
+				m_HasAlreadyDoubleJumped = false;
+			}
+
+			if (m_CharacterController.JumpRequested)
 			{
-				if(!m_HasAlreadyDoubleJumped)
+				if (m_IsOnGround)
 				{
-					m_HasAlreadyDoubleJumped = true;
 					m_Rigidbody.velocity = new Vector2(m_Rigidbody.velocity.x, 0.0f);
-					m_Rigidbody.AddForce(Vector2.up * m_DoubleJumpImpulse, ForceMode2D.Impulse);
+					m_Rigidbody.AddForce(Vector2.up * m_JumpImpulse, ForceMode2D.Impulse);
 					m_CharacterController.CancelJumpRequest();
+				}
+				else if (m_AllowDoubleJump)
+				{
+					if (!m_HasAlreadyDoubleJumped)
+					{
+						m_HasAlreadyDoubleJumped = true;
+						m_Rigidbody.velocity = new Vector2(m_Rigidbody.velocity.x, 0.0f);
+						m_Rigidbody.AddForce(Vector2.up * m_DoubleJumpImpulse, ForceMode2D.Impulse);
+						m_CharacterController.CancelJumpRequest();
+					}
 				}
 			}
 		}

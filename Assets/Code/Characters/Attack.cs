@@ -33,7 +33,7 @@ public class Attack : MonoBehaviour
 			Vector3 impulse = m_Impulse;
 			if(m_Character)
 			{
-				impulse = new Vector3(impulse.x * (m_Character.Direction >= 0 ? 1 : -1), impulse.y, impulse.z); 
+				impulse = new Vector3(impulse.x * (m_Character.transform.position.x < target.transform.position.x ? 1 : -1), impulse.y, impulse.z); 
 			}
 			target.TakeDamage(m_Damage, impulse);
 		}
