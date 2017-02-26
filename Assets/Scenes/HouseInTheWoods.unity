@@ -8380,6 +8380,57 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1001 &319812322
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4464846254750256, guid: 5021f6e174e917d44974101b316817d0, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -23.29
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464846254750256, guid: 5021f6e174e917d44974101b316817d0, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 2.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464846254750256, guid: 5021f6e174e917d44974101b316817d0, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464846254750256, guid: 5021f6e174e917d44974101b316817d0, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464846254750256, guid: 5021f6e174e917d44974101b316817d0, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464846254750256, guid: 5021f6e174e917d44974101b316817d0, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464846254750256, guid: 5021f6e174e917d44974101b316817d0, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4464846254750256, guid: 5021f6e174e917d44974101b316817d0, type: 2}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 1247870214117250, guid: 5021f6e174e917d44974101b316817d0, type: 2}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 5021f6e174e917d44974101b316817d0, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1 &319812323 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1247870214117250, guid: 5021f6e174e917d44974101b316817d0,
+    type: 2}
+  m_PrefabInternal: {fileID: 319812322}
 --- !u!1 &320241960
 GameObject:
   m_ObjectHideFlags: 0
@@ -36836,6 +36887,11 @@ Prefab:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 114464733985485364, guid: 0b29233192b3a14498325d48eaf5fc43,
+        type: 2}
+      propertyPath: m_EndLevelText.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 4646431763803238, guid: 0b29233192b3a14498325d48eaf5fc43, type: 2}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -36941,6 +36997,26 @@ Prefab:
     - target: {fileID: 1445592649652996, guid: 0b29233192b3a14498325d48eaf5fc43, type: 2}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114464733985485364, guid: 0b29233192b3a14498325d48eaf5fc43,
+        type: 2}
+      propertyPath: m_PancakeWizard
+      value: 
+      objectReference: {fileID: 319812323}
+    - target: {fileID: 114464733985485364, guid: 0b29233192b3a14498325d48eaf5fc43,
+        type: 2}
+      propertyPath: m_EndLevelText.Array.data[0]
+      value: 'The raiders asked where was the house and went off.
+
+        They were saved by the button.'
+      objectReference: {fileID: 0}
+    - target: {fileID: 114464733985485364, guid: 0b29233192b3a14498325d48eaf5fc43,
+        type: 2}
+      propertyPath: m_EndLevelText.Array.data[1]
+      value: 'Because breakfast was ruined, Pancake Wizard came and made pancakes
+        for them.
+
+        After that, their adventure began!'
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b29233192b3a14498325d48eaf5fc43, type: 2}

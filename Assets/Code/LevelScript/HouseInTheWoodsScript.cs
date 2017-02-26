@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class HouseInTheWoodsScript : MonoBehaviour 
 {
@@ -23,6 +24,7 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 	public GameObject m_Enemies = null;
 	public GameObject m_CamaastageTrigger = null;
+	public GameObject m_PancakeWizard = null;
 
 	public AIController m_ToetoebowWallController = null;
 	public Transform m_ToetoebowWallFirstTargetPosition = null;
@@ -41,6 +43,9 @@ public class HouseInTheWoodsScript : MonoBehaviour
 	[TextArea(4, 4)]
 	public List<string> m_ToeToeBowWallText = new List<string>();
 
+	[TextArea(4, 4)]
+	public List<string> m_EndLevelText = new List<string>();
+
 	public float m_DelayBetweenTexts = 3.0f;
 
 	public float m_TextSpeed = 30.0f;
@@ -53,28 +58,33 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 	private PlayerController[] m_Controllers = null;
 	private bool m_Restarting = false;
+	private bool m_IsEnding = false;
 
 	void Update()
 	{
-		if (m_Controllers.Length == 0)
+		if (!m_IsEnding)
 		{
-			RestartGame();
-		}
-		else
-		{
-			bool allDead = true;
-
-			for (int i = 0; i < m_Controllers.Length; i++)
-			{
-				if(m_Controllers[i] != null && m_Controllers[i].m_Character != null && m_Controllers[i].m_Character.isActiveAndEnabled && m_Controllers[i].m_Character.State != CharacterState.Dead)
-				{
-					allDead = false;
-				}
-			}
-
-			if (allDead)
+			if (m_Controllers.Length == 0)
 			{
 				RestartGame();
+			}
+			else
+			{
+				bool allDead = true;
+
+				for (int i = 0; i < m_Controllers.Length; i++)
+				{
+					if (m_Controllers[i] != null && m_Controllers[i].m_Character != null &&
+					    m_Controllers[i].m_Character.isActiveAndEnabled && m_Controllers[i].m_Character.State != CharacterState.Dead)
+					{
+						allDead = false;
+					}
+				}
+
+				if (allDead)
+				{
+					RestartGame();
+				}
 			}
 		}
 	}
@@ -300,7 +310,14 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 	IEnumerator ToeToeBowsAwayScript()
 	{
-		for(int i = 0; i < m_Controllers.Length; i++)
+		m_IsEnding = true;
+
+		for (int i = 0; i < m_Controllers.Length; i++)
+		{
+			m_Controllers[i].LockControl();
+		}
+
+		for (int i = 0; i < m_Controllers.Length; i++)
 		{
 			m_Controllers[i].gameObject.SetActive(false);
 		}
@@ -309,7 +326,15 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 		m_ToetoebowWallController.SetTargetPosition(null);
 
-		yield return new WaitForSeconds(2.0f);
+		if (TextBox.Instance != null)
+		{
+			for (int i = 0; i < m_EndLevelText.Count; i++)
+			{
+				yield return TextBox.Instance.DisplayText(m_EndLevelText[i], m_TextSpeed);
+				if (i != m_EndLevelText.Count - 1)
+					yield return new WaitForSeconds(m_DelayBetweenTexts);
+			}
+		}
 
 		m_ToetoebowWallController.SetTargetPosition(m_ToeToeBowWallAwayTargetPosition);
 
@@ -325,6 +350,16 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		m_AudioSource.Stop();
 		m_AudioSource.clip = m_VictoryTheme;
 		m_AudioSource.Play();
+
+		m_PancakeWizard.SetActive(true);
+
+		yield return new WaitForSeconds(10.0f);
+
+		FadeScreen.FadeToBlack(1.0f, LoadCredits);
 	}
 
+	void LoadCredits()
+	{
+		SceneManager.LoadScene("Credits");
+	}
 }

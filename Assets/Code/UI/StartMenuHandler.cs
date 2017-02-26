@@ -17,6 +17,7 @@ public class StartMenuHandler : MonoBehaviour
 	private StartMenuState m_State = StartMenuState.Invalid;
 
 	public List<Graphic> m_PressAnyKeyImages = null;
+	public CanvasGroup m_PressAnyKeyCanvasGroup = null;
 	public List<Graphic> m_CharacterSelectImages = null;
 	public Graphic m_PanthodeoImage = null;
 	public Graphic m_ZiggyImage = null;
@@ -29,6 +30,7 @@ public class StartMenuHandler : MonoBehaviour
 		{
 			m_PressAnyKeyImages[i].CrossFadeAlpha(0.0f, 0.0f, false);
 		}
+		
 
 		for (int i = 0; i < m_CharacterSelectImages.Count; i++)
 		{
@@ -40,6 +42,17 @@ public class StartMenuHandler : MonoBehaviour
 		m_StartGameGraphic.CrossFadeAlpha(0.0f, 0.0f, false);
 
 		RequestState(StartMenuState.PressAnyKey);
+	}
+
+	IEnumerator FadeGroupAlpha(CanvasGroup group, float target, float duration)
+	{
+		float startDuration = duration;
+		while (duration > 0.0f)
+		{
+			yield return 0;
+			duration -= Time.deltaTime;
+			float ratio = duration / startDuration;
+		}
 	}
 
 	void Update()
