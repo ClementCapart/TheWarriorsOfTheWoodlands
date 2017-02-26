@@ -29,7 +29,24 @@ public class FadeScreen : MonoBehaviour
 			{
 				Instance.StopCoroutine(Instance.m_CurrentCoroutine);				
 			}
-			Instance.m_CurrentCoroutine = Instance.StartCoroutine(Instance.Fade(true, duration, endCallback));
+			if (Instance.isActiveAndEnabled)
+			{
+				Instance.m_CurrentCoroutine = Instance.StartCoroutine(Instance.Fade(true, duration, endCallback));
+			}
+			else
+			{
+				if (endCallback != null)
+				{
+					endCallback.Invoke();
+				}
+			}
+		}
+		else
+		{
+			if (endCallback != null)
+			{
+				endCallback.Invoke();
+			}
 		}
 	}
 
@@ -41,7 +58,25 @@ public class FadeScreen : MonoBehaviour
 			{
 				Instance.StopCoroutine(Instance.m_CurrentCoroutine);
 			}
-			Instance.m_CurrentCoroutine = Instance.StartCoroutine(Instance.Fade(false, duration, endCallback));
+
+			if(Instance.isActiveAndEnabled)
+			{
+				Instance.m_CurrentCoroutine = Instance.StartCoroutine(Instance.Fade(false, duration, endCallback));
+			}
+			else
+			{
+				if (endCallback != null)
+				{
+					endCallback.Invoke();
+				}
+			}			
+		}
+		else
+		{
+			if (endCallback != null)
+			{
+				endCallback.Invoke();
+			}
 		}
 	}
 
