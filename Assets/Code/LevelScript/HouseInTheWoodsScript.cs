@@ -128,10 +128,13 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 			for (int i = 0; i < m_Controllers.Length; i++)
 			{
-				if (m_Controllers[i].isActiveAndEnabled)
+				if (m_Controllers[i] != null)
 				{
-					m_GameCamera.m_MainTarget = m_Controllers[i].transform;
-					break;
+					if (m_Controllers[i].isActiveAndEnabled)
+					{
+						m_GameCamera.m_MainTarget = m_Controllers[i].transform;
+						break;
+					}
 				}
 			}
 		}
@@ -153,7 +156,10 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 		for(int i = 0; i < m_Controllers.Length; i++)
 		{
-			m_Controllers[i].LockControl();
+			if (m_Controllers[i] != null)
+			{
+				m_Controllers[i].LockControl();
+			}
 		}
 
 		GameObject obj = Instantiate<GameObject>(m_GameCameraPrefab);
@@ -214,7 +220,10 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 		for (int i = 0; i < m_Controllers.Length; i++)
 		{
-			m_Controllers[i].UnlockControl();
+			if (m_Controllers[i] != null)
+			{
+				m_Controllers[i].UnlockControl();
+			}
 		}
 
 		if(TextBox.Instance)
@@ -226,10 +235,13 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		m_ScriptedPointsOfInterest.SetActive(false);
 		for(int i = 0; i < m_Controllers.Length; i++)
 		{
-			if(m_Controllers[i].isActiveAndEnabled)
+			if (m_Controllers[i] != null)
 			{
-				m_GameCamera.m_MainTarget = m_Controllers[i].transform;
-				break;
+				if (m_Controllers[i].isActiveAndEnabled)
+				{
+					m_GameCamera.m_MainTarget = m_Controllers[i].transform;
+					break;
+				}
 			}
 		}
 		m_GameCamera.m_TargetPositionSmoothRate = m_DefaultCameraSmoothingRate;
@@ -239,7 +251,10 @@ public class HouseInTheWoodsScript : MonoBehaviour
 	{
 		for (int i = 0; i < m_Controllers.Length; i++)
 		{
-			m_Controllers[i].LockControl();
+			if (m_Controllers[i] != null)
+			{
+				m_Controllers[i].LockControl();
+			}
 		}
 		m_SwordSlasherAIController.SetTargetPosition(m_SwordSlasherOutOfScreenPosition);
 
@@ -280,16 +295,22 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		m_ScriptedPointsOfInterest.SetActive(false);
 		for (int i = 0; i < m_Controllers.Length; i++)
 		{
-			if (m_Controllers[i].isActiveAndEnabled)
+			if (m_Controllers[i] != null)
 			{
-				m_GameCamera.m_MainTarget = m_Controllers[i].transform;
-				break;
+				if (m_Controllers[i].isActiveAndEnabled)
+				{
+					m_GameCamera.m_MainTarget = m_Controllers[i].transform;
+					break;
+				}
 			}
 		}
 
 		for (int i = 0; i < m_Controllers.Length; i++)
 		{
-			m_Controllers[i].UnlockControl();
+			if (m_Controllers[i] != null)
+			{
+				m_Controllers[i].UnlockControl();
+			}
 		}
 
 		m_AudioSource.Stop();
@@ -314,12 +335,18 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 		for (int i = 0; i < m_Controllers.Length; i++)
 		{
-			m_Controllers[i].LockControl();
+			if (m_Controllers[i] != null)
+			{
+				m_Controllers[i].LockControl();
+			}
 		}
 
 		for (int i = 0; i < m_Controllers.Length; i++)
 		{
-			m_Controllers[i].gameObject.SetActive(false);
+			if (m_Controllers[i] != null)
+			{
+				m_Controllers[i].gameObject.SetActive(false);
+			}
 		}
 
 		m_HouseAnimator.Play("HouseCamastaage");
@@ -344,7 +371,10 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 		for (int i = 0; i < m_Controllers.Length; i++)
 		{
-			m_Controllers[i].gameObject.SetActive(true);
+			if (m_Controllers[i] != null)
+			{
+				m_Controllers[i].gameObject.SetActive(true);
+			}
 		}
 
 		m_AudioSource.Stop();
