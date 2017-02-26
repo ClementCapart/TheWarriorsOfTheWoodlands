@@ -92,7 +92,7 @@ GameObject:
   - component: {fileID: 114539345061483612}
   - component: {fileID: 114589429704539868}
   - component: {fileID: 114913079008384264}
-  m_Layer: 11
+  m_Layer: 12
   m_Name: SwordSlasher
   m_TagString: Untagged
   m_Icon: {fileID: 0}
