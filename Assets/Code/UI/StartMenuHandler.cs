@@ -71,8 +71,8 @@ public class StartMenuHandler : MonoBehaviour
 			case StartMenuState.SelectCharacter:
 				GameSessionData.s_CurrentCharacters = Characters.None;
 
-				m_PanthodeoImage.CrossFadeAlpha(0.3f, 0.0f, false);
-				m_ZiggyImage.CrossFadeAlpha(0.3f, 0.0f, false);
+				m_PanthodeoImage.CrossFadeAlpha(0.0f, 0.0f, false);
+				m_ZiggyImage.CrossFadeAlpha(0.0f, 0.0f, false);
 				for (int i = 0; i < m_PressAnyKeyImages.Count; i++)
 				{
 					m_PressAnyKeyImages[i].CrossFadeAlpha(0.0f, 0.5f, false);
