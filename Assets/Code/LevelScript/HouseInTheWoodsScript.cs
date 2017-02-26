@@ -377,11 +377,11 @@ public class HouseInTheWoodsScript : MonoBehaviour
 						}
 					}
 
+					Invoke("ActivatePancakeWizard", 2.0f);
+
 					m_AudioSource.Stop();
 					m_AudioSource.clip = m_VictoryTheme;
 					m_AudioSource.Play();
-
-					m_PancakeWizard.SetActive(true);
 				}
 			}
 		}				
@@ -391,8 +391,13 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		FadeScreen.FadeToBlack(1.0f, LoadCredits);
 	}
 
+	void ActivatePancakeWizard()
+	{
+		m_PancakeWizard.SetActive(true);
+	} 
+
 	void LoadCredits()
 	{
-		SceneManager.LoadScene("Credits");
+		SceneManager.LoadSceneAsync("Credits", LoadSceneMode.Additive);
 	}
 }
