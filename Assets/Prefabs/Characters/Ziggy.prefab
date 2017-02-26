@@ -419,6 +419,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &114646490844752996
 MonoBehaviour:
