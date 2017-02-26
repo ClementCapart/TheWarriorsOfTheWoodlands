@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class HouseInTheWoodsScript : MonoBehaviour 
 {
+	public bool m_DebugScene = false;
+
 	public GameObject m_Panthodeo;
 	public GameObject m_Ziggy;
 
@@ -50,12 +52,49 @@ public class HouseInTheWoodsScript : MonoBehaviour
 	public AudioClip m_VictoryTheme = null;
 
 	private PlayerController[] m_Controllers = null;
+	private bool m_Restarting = false;
+
+	void Update()
+	{
+		if (m_Controllers.Length == 0)
+		{
+			RestartGame();
+		}
+		else
+		{
+			bool allDead = true;
+
+			for (int i = 0; i < m_Controllers.Length; i++)
+			{
+				if(m_Controllers[i] != null && m_Controllers[i].m_Character != null && m_Controllers[i].m_Character.isActiveAndEnabled && m_Controllers[i].m_Character.State != CharacterState.Dead)
+				{
+					allDead = false;
+				}
+			}
+
+			if (allDead)
+			{
+				RestartGame();
+			}
+		}
+	}
+
+	void RestartGame()
+	{
+		if (!m_Restarting)
+		{
+			m_Restarting = true;
+			FadeScreen.FadeToBlack(1.0f, LoadMainMenu);
+		}
+	}
+
+	void LoadMainMenu()
+	{
+		UnityEngine.SceneManagement.SceneManager.LoadScene("StartMenu");
+	}
 
 	void Start()
 	{
-		StartCoroutine(IntroScript());
-		FadeScreen.FadeFromBlack(1.0f);
-
 		if(m_Panthodeo != null && ((GameSessionData.s_CurrentCharacters & Characters.Panthodeo) != 0))
 		{
 			m_Panthodeo.SetActive(true);
@@ -65,6 +104,29 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		{
 			m_Ziggy.SetActive(true);
 		}
+
+		if (!m_DebugScene)
+		{
+			StartCoroutine(IntroScript());
+		}
+		else
+		{
+			m_Controllers = Resources.FindObjectsOfTypeAll<PlayerController>();
+
+			GameObject obj = Instantiate<GameObject>(m_GameCameraPrefab);
+			m_GameCamera = obj.GetComponent<SmartCamera>();
+
+			for (int i = 0; i < m_Controllers.Length; i++)
+			{
+				if (m_Controllers[i].isActiveAndEnabled)
+				{
+					m_GameCamera.m_MainTarget = m_Controllers[i].transform;
+					break;
+				}
+			}
+		}
+
+		FadeScreen.FadeFromBlack(1.0f);
 	}
 
 	public void GetBackToHouse()

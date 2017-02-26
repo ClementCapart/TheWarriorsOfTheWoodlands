@@ -1486,10 +1486,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -2081,10 +2081,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -3109,10 +3109,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -3190,10 +3190,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -5711,10 +5711,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -7276,10 +7276,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -7486,10 +7486,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -9349,10 +9349,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -10372,6 +10372,7 @@ Transform:
   - {fileID: 433042459}
   - {fileID: 1443794798}
   - {fileID: 1103248362}
+  - {fileID: 1266646942}
   m_Father: {fileID: 508177712}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -10387,10 +10388,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -10711,10 +10712,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -11523,10 +11524,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -12924,10 +12925,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -13198,10 +13199,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -15224,10 +15225,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -16020,10 +16021,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -16962,10 +16963,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -17300,10 +17301,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -21660,10 +21661,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -23848,10 +23849,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -26234,10 +26235,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -26830,10 +26831,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -27039,10 +27040,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -27312,10 +27313,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -27720,10 +27721,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -28581,10 +28582,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -28662,10 +28663,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -29128,10 +29129,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -29475,10 +29476,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -30085,6 +30086,63 @@ SpriteRenderer:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
+--- !u!1 &1266646941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1266646942}
+  - component: {fileID: 1266646944}
+  - component: {fileID: 1266646943}
+  m_Layer: 12
+  m_Name: HurtBox
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1266646942
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1266646941}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.5, y: 5.2, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 427395638}
+  m_RootOrder: 58
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1266646943
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1266646941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b59ba61ed3e9a1c4d9b3f357e84353d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Damage: 999
+  m_ImpulseForce: 0
+--- !u!61 &1266646944
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1266646941}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 10, y: 10}
 --- !u!1 &1266817777
 GameObject:
   m_ObjectHideFlags: 0
@@ -30592,10 +30650,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -31277,10 +31335,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -31730,10 +31788,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -31875,10 +31933,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -32673,10 +32731,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -33077,10 +33135,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -33593,11 +33651,6 @@ Prefab:
       propertyPath: m_IsActive
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 114299410352813782, guid: 83c79a477ab87d54e857963463cdc328,
-        type: 2}
-      propertyPath: Name
-      value: Panthodeo
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 83c79a477ab87d54e857963463cdc328, type: 2}
   m_IsPrefabParent: 0
@@ -33728,10 +33781,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -34002,10 +34055,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -35503,10 +35556,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -36751,10 +36804,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -36874,6 +36927,20 @@ Prefab:
       propertyPath: m_Ziggy
       value: 
       objectReference: {fileID: 1651306999}
+    - target: {fileID: 114464733985485364, guid: 0b29233192b3a14498325d48eaf5fc43,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 114464733985485364, guid: 0b29233192b3a14498325d48eaf5fc43,
+        type: 2}
+      propertyPath: m_DebugScene
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1445592649652996, guid: 0b29233192b3a14498325d48eaf5fc43, type: 2}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0b29233192b3a14498325d48eaf5fc43, type: 2}
   m_IsPrefabParent: 0
@@ -36934,10 +37001,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -38726,10 +38793,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -38963,10 +39030,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -39307,10 +39374,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -39388,10 +39455,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -39983,10 +40050,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -40129,10 +40196,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -40210,10 +40277,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -41656,10 +41723,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -41737,10 +41804,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -41882,10 +41949,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -42227,10 +42294,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -42699,10 +42766,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -43103,10 +43170,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -43318,10 +43385,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -43819,10 +43886,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -44656,10 +44723,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -48187,10 +48254,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -49295,10 +49362,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -50826,10 +50893,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
@@ -50907,10 +50974,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Name: 
+  State: 0
   IsMoving: 0
   IsAttacking: 0
   IsJumping: 0
-  IsDead: 0
   Direction: 1
   CurrentHealthPoints: 0
   MaxHealthPoints: 0
