@@ -1473,6 +1473,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &51341909
 MonoBehaviour:
@@ -2068,6 +2069,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &79984131
 MonoBehaviour:
@@ -3096,6 +3098,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &125416724
 MonoBehaviour:
@@ -3177,6 +3180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &126542126
 MonoBehaviour:
@@ -5698,6 +5702,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &219377497
 MonoBehaviour:
@@ -7263,6 +7268,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &282213945
 MonoBehaviour:
@@ -7473,6 +7479,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &289598468
 MonoBehaviour:
@@ -9387,6 +9394,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &385526632
 MonoBehaviour:
@@ -10751,6 +10759,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &433042461
 MonoBehaviour:
@@ -11563,6 +11572,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &458558867
 MonoBehaviour:
@@ -12965,6 +12975,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &521200808
 MonoBehaviour:
@@ -13239,6 +13250,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &536552275
 MonoBehaviour:
@@ -15266,6 +15278,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &646353998
 MonoBehaviour:
@@ -16140,6 +16153,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &680796501
 MonoBehaviour:
@@ -16432,7 +16446,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 177efd8591b78ad4699b4c36a9aa048b, type: 3}
-  m_Color: {r: 0.45588237, g: 0.22946696, b: 0.17766005, a: 1}
+  m_Color: {r: 0.27205884, g: 0.12880026, b: 0.096020766, a: 1}
   m_FlipX: 0
   m_FlipY: 0
 --- !u!4 &697164107
@@ -17082,6 +17096,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &714758351
 MonoBehaviour:
@@ -17420,6 +17435,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &729631792
 MonoBehaviour:
@@ -18979,7 +18995,7 @@ ParticleSystem:
   serializedVersion: 5
   lengthInSec: 5
   speed: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   autoRandomSeed: 1
@@ -19025,7 +19041,7 @@ ParticleSystem:
   moveWithTransform: 0
   moveWithCustomTransform: {fileID: 0}
   scalingMode: 1
-  randomSeed: -1704189287
+  randomSeed: 540371105
   InitialModule:
     serializedVersion: 3
     enabled: 1
@@ -21780,6 +21796,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &816867730
 MonoBehaviour:
@@ -23968,6 +23985,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &930493359
 MonoBehaviour:
@@ -26433,6 +26451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1052806811
 MonoBehaviour:
@@ -27029,6 +27048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1084206711
 MonoBehaviour:
@@ -27238,6 +27258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1097615028
 MonoBehaviour:
@@ -27511,6 +27532,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1103248364
 MonoBehaviour:
@@ -27919,6 +27941,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1117811270
 MonoBehaviour:
@@ -28780,6 +28803,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1154741974
 MonoBehaviour:
@@ -28861,6 +28885,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1155583778
 MonoBehaviour:
@@ -29327,6 +29352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1186121510
 MonoBehaviour:
@@ -29674,6 +29700,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1221831916
 MonoBehaviour:
@@ -30848,6 +30875,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1286257512
 MonoBehaviour:
@@ -31533,6 +31561,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1311670078
 MonoBehaviour:
@@ -31985,6 +32014,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1326749867
 MonoBehaviour:
@@ -32130,6 +32160,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1329742868
 MonoBehaviour:
@@ -32928,6 +32959,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1381115165
 MonoBehaviour:
@@ -33332,6 +33364,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1399407286
 MonoBehaviour:
@@ -33978,6 +34011,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1439122427
 MonoBehaviour:
@@ -34252,6 +34286,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1443794800
 MonoBehaviour:
@@ -35753,6 +35788,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1548324661
 MonoBehaviour:
@@ -37001,6 +37037,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1621169624
 MonoBehaviour:
@@ -37221,6 +37258,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1625227998
 MonoBehaviour:
@@ -39013,6 +39051,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1695439541
 MonoBehaviour:
@@ -39250,6 +39289,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1714951407
 MonoBehaviour:
@@ -39594,6 +39634,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1729918570
 MonoBehaviour:
@@ -39675,6 +39716,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1731359556
 MonoBehaviour:
@@ -40270,6 +40312,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1756019310
 MonoBehaviour:
@@ -40416,6 +40459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1761166448
 MonoBehaviour:
@@ -40497,6 +40541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1762897950
 MonoBehaviour:
@@ -41943,6 +41988,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1848187802
 MonoBehaviour:
@@ -42024,6 +42070,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1849796048
 MonoBehaviour:
@@ -42169,6 +42216,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1858360326
 MonoBehaviour:
@@ -42514,6 +42562,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1869282232
 MonoBehaviour:
@@ -42986,6 +43035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1882246812
 MonoBehaviour:
@@ -43390,6 +43440,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1902389701
 MonoBehaviour:
@@ -43605,6 +43656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1905709150
 MonoBehaviour:
@@ -44106,6 +44158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1925216156
 MonoBehaviour:
@@ -44943,6 +44996,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1957588664
 MonoBehaviour:
@@ -48474,6 +48528,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &1984454207
 MonoBehaviour:
@@ -49582,6 +49637,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &2027831407
 MonoBehaviour:
@@ -51035,6 +51091,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &2116700766
 MonoBehaviour:
@@ -51116,6 +51173,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_HasAlreadyAttacked: 0
+  m_HasAlreadyBeenHurt: 0
   m_LoopAttack: 0
 --- !u!114 &2124766468
 MonoBehaviour:
