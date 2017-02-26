@@ -80,7 +80,7 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		m_AudioSource.clip = m_StartAdventureTheme;
 		m_AudioSource.Play();
 
-		m_Controllers = FindObjectsOfType<PlayerController>();
+		m_Controllers = Resources.FindObjectsOfTypeAll<PlayerController>();
 
 		for(int i = 0; i < m_Controllers.Length; i++)
 		{
