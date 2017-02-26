@@ -358,32 +358,35 @@ public class HouseInTheWoodsScript : MonoBehaviour
 			for (int i = 0; i < m_EndLevelText.Count; i++)
 			{
 				yield return TextBox.Instance.DisplayText(m_EndLevelText[i], m_TextSpeed);
+				if (i == 0)
+				{
+					m_ToetoebowWallController.SetTargetPosition(m_ToeToeBowWallAwayTargetPosition);
+				}
 				if (i != m_EndLevelText.Count - 1)
 					yield return new WaitForSeconds(m_DelayBetweenTexts);
-			}
-		}
 
-		m_ToetoebowWallController.SetTargetPosition(m_ToeToeBowWallAwayTargetPosition);
+				if (i == 0)
+				{
+					m_HouseAnimator.Play("HouseHighTechReveal");
+
+					for (int j = 0; j < m_Controllers.Length; j++)
+					{
+						if (m_Controllers[j] != null)
+						{
+							m_Controllers[j].gameObject.SetActive(true);
+						}
+					}
+
+					m_AudioSource.Stop();
+					m_AudioSource.clip = m_VictoryTheme;
+					m_AudioSource.Play();
+
+					m_PancakeWizard.SetActive(true);
+				}
+			}
+		}				
 
 		yield return new WaitForSeconds(3.0f);
-
-		m_HouseAnimator.Play("HouseHighTechReveal");
-
-		for (int i = 0; i < m_Controllers.Length; i++)
-		{
-			if (m_Controllers[i] != null)
-			{
-				m_Controllers[i].gameObject.SetActive(true);
-			}
-		}
-
-		m_AudioSource.Stop();
-		m_AudioSource.clip = m_VictoryTheme;
-		m_AudioSource.Play();
-
-		m_PancakeWizard.SetActive(true);
-
-		yield return new WaitForSeconds(10.0f);
 
 		FadeScreen.FadeToBlack(1.0f, LoadCredits);
 	}
