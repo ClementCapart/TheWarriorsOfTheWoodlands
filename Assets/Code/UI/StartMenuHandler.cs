@@ -21,7 +21,7 @@ public class StartMenuHandler : MonoBehaviour
 	public List<Graphic> m_CharacterSelectImages = null;
 	public Graphic m_PanthodeoImage = null;
 	public Graphic m_ZiggyImage = null;
-	public Graphic m_StartGameGraphic = null;
+	public CanvasGroup m_StartGameGraphic = null;
 
 	void Start()
 	{
@@ -30,7 +30,8 @@ public class StartMenuHandler : MonoBehaviour
 		{
 			m_PressAnyKeyImages[i].CrossFadeAlpha(0.0f, 0.0f, false);
 		}
-		
+
+		StartCoroutine(FadeGroupAlpha(m_PressAnyKeyCanvasGroup, 0.0f, 0.0f));
 
 		for (int i = 0; i < m_CharacterSelectImages.Count; i++)
 		{
@@ -39,7 +40,7 @@ public class StartMenuHandler : MonoBehaviour
 
 		m_ZiggyImage.CrossFadeAlpha(0.0f, 0.0f, false);
 		m_PanthodeoImage.CrossFadeAlpha(0.0f, 0.0f, false);
-		m_StartGameGraphic.CrossFadeAlpha(0.0f, 0.0f, false);
+		StartCoroutine(FadeGroupAlpha(m_StartGameGraphic, 0.0f, 0.0f));
 
 		RequestState(StartMenuState.PressAnyKey);
 	}
@@ -47,12 +48,18 @@ public class StartMenuHandler : MonoBehaviour
 	IEnumerator FadeGroupAlpha(CanvasGroup group, float target, float duration)
 	{
 		float startDuration = duration;
+		float startAlpha = group.alpha;
+
 		while (duration > 0.0f)
 		{
 			yield return 0;
 			duration -= Time.deltaTime;
 			float ratio = duration / startDuration;
+
+			group.alpha = Mathf.Lerp(target, startAlpha, ratio);
 		}
+
+		group.alpha = target;
 	}
 
 	void Update()
@@ -79,6 +86,7 @@ public class StartMenuHandler : MonoBehaviour
 				{
 					m_PressAnyKeyImages[i].CrossFadeAlpha(1.0f, 0.5f, false);
 				}
+				StartCoroutine(FadeGroupAlpha(m_PressAnyKeyCanvasGroup, 1.0f, 0.5f));
 				break;
 
 			case StartMenuState.SelectCharacter:
@@ -90,6 +98,7 @@ public class StartMenuHandler : MonoBehaviour
 				{
 					m_PressAnyKeyImages[i].CrossFadeAlpha(0.0f, 0.5f, false);
 				}
+				StartCoroutine(FadeGroupAlpha(m_PressAnyKeyCanvasGroup, 0.0f, 0.5f));
 
 				for (int i = 0; i < m_CharacterSelectImages.Count; i++)
 				{
@@ -121,7 +130,7 @@ public class StartMenuHandler : MonoBehaviour
 					{
 						if (GameSessionData.s_CurrentCharacters == 0)
 						{
-							m_StartGameGraphic.CrossFadeAlpha(1.0f, 0.5f, false);
+							StartCoroutine(FadeGroupAlpha(m_StartGameGraphic, 1.0f, 0.5f));
 						}
 						GameSessionData.s_CurrentCharacters |= Characters.Panthodeo;
 						m_PanthodeoImage.CrossFadeAlpha(1.0f, 0.5f, false);
@@ -134,7 +143,7 @@ public class StartMenuHandler : MonoBehaviour
 					{
 						if(GameSessionData.s_CurrentCharacters == 0)
 						{
-							m_StartGameGraphic.CrossFadeAlpha(1.0f, 0.5f, false);
+							StartCoroutine(FadeGroupAlpha(m_StartGameGraphic, 1.0f, 0.5f));
 						}
 						GameSessionData.s_CurrentCharacters |= Characters.Ziggy;
 						m_ZiggyImage.CrossFadeAlpha(1.0f, 0.5f, false);
