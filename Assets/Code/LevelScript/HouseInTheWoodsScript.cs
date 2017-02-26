@@ -77,9 +77,6 @@ public class HouseInTheWoodsScript : MonoBehaviour
 		m_GameplayPointsOfInterest.SetActive(false);
 		m_Enemies.SetActive(false);
 
-		m_AudioSource.clip = m_StartAdventureTheme;
-		m_AudioSource.Play();
-
 		m_Controllers = Resources.FindObjectsOfTypeAll<PlayerController>();
 
 		for(int i = 0; i < m_Controllers.Length; i++)
@@ -155,7 +152,14 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 		m_GameplayPointsOfInterest.SetActive(true);
 		m_ScriptedPointsOfInterest.SetActive(false);
-		m_GameCamera.m_MainTarget = m_Controllers[0].transform;
+		for(int i = 0; i < m_Controllers.Length; i++)
+		{
+			if(m_Controllers[i].isActiveAndEnabled)
+			{
+				m_GameCamera.m_MainTarget = m_Controllers[i].transform;
+				break;
+			}
+		}
 		m_GameCamera.m_TargetPositionSmoothRate = m_DefaultCameraSmoothingRate;
 	}
 
@@ -202,7 +206,14 @@ public class HouseInTheWoodsScript : MonoBehaviour
 
 		m_GameplayPointsOfInterest.SetActive(true);
 		m_ScriptedPointsOfInterest.SetActive(false);
-		m_GameCamera.m_MainTarget = m_Controllers[0].transform;
+		for (int i = 0; i < m_Controllers.Length; i++)
+		{
+			if (m_Controllers[i].isActiveAndEnabled)
+			{
+				m_GameCamera.m_MainTarget = m_Controllers[i].transform;
+				break;
+			}
+		}
 
 		for (int i = 0; i < m_Controllers.Length; i++)
 		{
